@@ -31,5 +31,6 @@ json:
     output: Env_Colors_Gradient.swift
     templateName: inline-swift5
     params:
+      enumName: Env_Gradients
       publicAccess: true
       swiftVersion: "5.0"
