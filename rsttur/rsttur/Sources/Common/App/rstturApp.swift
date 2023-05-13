@@ -6,7 +6,7 @@ import SwiftUI
 struct rstturApp: App {
     var body: some Scene {
         WindowGroup {
-            GradientView(startColor: .blue, endColor: .red, angle: .degrees(170))
+            Env_Gradients.g11.linearGradient()
         }
     }
 }

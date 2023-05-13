@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		640102DA2A0E813C006CE9B2 /* rstturApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640102D92A0E813C006CE9B2 /* rstturApp.swift */; };
-		640102DC2A0E813C006CE9B2 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640102DB2A0E813C006CE9B2 /* GradientView.swift */; };
 		640102DE2A0E8144006CE9B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 640102DD2A0E8144006CE9B2 /* Assets.xcassets */; };
 		640102E12A0E8144006CE9B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 640102E02A0E8144006CE9B2 /* Preview Assets.xcassets */; };
 		640F061C2A0FA84C00B8202C /* CategoriesMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F061B2A0FA84C00B8202C /* CategoriesMainView.swift */; };
@@ -20,7 +19,7 @@
 		640F062E2A0FB8EA00B8202C /* PlacesItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F062D2A0FB8EA00B8202C /* PlacesItemView.swift */; };
 		640F06302A0FB95300B8202C /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F062F2A0FB95300B8202C /* PlacesViewModel.swift */; };
 		640F06322A0FB99F00B8202C /* PlaceItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F06312A0FB99F00B8202C /* PlaceItemModel.swift */; };
-		640F063A2A0FBBA900B8202C /* UIColor_HEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F06392A0FBBA900B8202C /* UIColor_HEX.swift */; };
+		640F063A2A0FBBA900B8202C /* Color_from_hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F06392A0FBBA900B8202C /* Color_from_hex.swift */; };
 		640F063C2A0FBC1200B8202C /* NetworkModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F063B2A0FBC1200B8202C /* NetworkModels.swift */; };
 		640F063E2A0FBCCA00B8202C /* DeeplinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F063D2A0FBCCA00B8202C /* DeeplinkService.swift */; };
 		640F06402A0FBCDE00B8202C /* BackendNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F063F2A0FBCDE00B8202C /* BackendNetworkService.swift */; };
@@ -29,6 +28,8 @@
 		64F874D82A0FED5800064F56 /* Env_Colors_Gradient.txt in Resources */ = {isa = PBXBuildFile; fileRef = 64F874D72A0FED5800064F56 /* Env_Colors_Gradient.txt */; };
 		64F874DA2A0FED9A00064F56 /* Env_Colors_Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F874D92A0FED9A00064F56 /* Env_Colors_Gradient.swift */; };
 		64F874E02A100D1800064F56 /* Env_Colors_Gradient.json in Resources */ = {isa = PBXBuildFile; fileRef = 64F874DF2A100D1800064F56 /* Env_Colors_Gradient.json */; };
+		64F874EF2A10516700064F56 /* LinearGradient_init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F874EE2A10516700064F56 /* LinearGradient_init.swift */; };
+		64F874F12A1051FD00064F56 /* Dictionary_to_LinearGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F874F02A1051FD00064F56 /* Dictionary_to_LinearGradient.swift */; };
 		9B7926725F6DC58715C8CEC9 /* Pods_rsttur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A4CFBFCFA95A18DDBAC192D /* Pods_rsttur.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +37,6 @@
 		5A4CFBFCFA95A18DDBAC192D /* Pods_rsttur.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rsttur.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		640102D62A0E813C006CE9B2 /* rsttur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rsttur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		640102D92A0E813C006CE9B2 /* rstturApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rstturApp.swift; sourceTree = "<group>"; };
-		640102DB2A0E813C006CE9B2 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		640102DD2A0E8144006CE9B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		640102E02A0E8144006CE9B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		640F061B2A0FA84C00B8202C /* CategoriesMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesMainView.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		640F062D2A0FB8EA00B8202C /* PlacesItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesItemView.swift; sourceTree = "<group>"; };
 		640F062F2A0FB95300B8202C /* PlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewModel.swift; sourceTree = "<group>"; };
 		640F06312A0FB99F00B8202C /* PlaceItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceItemModel.swift; sourceTree = "<group>"; };
-		640F06392A0FBBA900B8202C /* UIColor_HEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor_HEX.swift; sourceTree = "<group>"; };
+		640F06392A0FBBA900B8202C /* Color_from_hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_from_hex.swift; sourceTree = "<group>"; };
 		640F063B2A0FBC1200B8202C /* NetworkModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModels.swift; sourceTree = "<group>"; };
 		640F063D2A0FBCCA00B8202C /* DeeplinkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkService.swift; sourceTree = "<group>"; };
 		640F063F2A0FBCDE00B8202C /* BackendNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendNetworkService.swift; sourceTree = "<group>"; };
@@ -57,6 +57,8 @@
 		64F874D72A0FED5800064F56 /* Env_Colors_Gradient.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Env_Colors_Gradient.txt; sourceTree = "<group>"; };
 		64F874D92A0FED9A00064F56 /* Env_Colors_Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env_Colors_Gradient.swift; sourceTree = "<group>"; };
 		64F874DF2A100D1800064F56 /* Env_Colors_Gradient.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Env_Colors_Gradient.json; sourceTree = "<group>"; };
+		64F874EE2A10516700064F56 /* LinearGradient_init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearGradient_init.swift; sourceTree = "<group>"; };
+		64F874F02A1051FD00064F56 /* Dictionary_to_LinearGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary_to_LinearGradient.swift; sourceTree = "<group>"; };
 		9B2B666E1E3C40511091C86F /* Pods-rsttur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rsttur.debug.xcconfig"; path = "Target Support Files/Pods-rsttur/Pods-rsttur.debug.xcconfig"; sourceTree = "<group>"; };
 		FAA85B4B71EEBD9922733D62 /* Pods-rsttur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rsttur.release.xcconfig"; path = "Target Support Files/Pods-rsttur/Pods-rsttur.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,8 +140,6 @@
 				640F06212A0FB65500B8202C /* Model */,
 				640F06202A0FB64D00B8202C /* ViewModel */,
 				640F061F2A0FB64100B8202C /* Views */,
-				640F061B2A0FA84C00B8202C /* CategoriesMainView.swift */,
-				640F061D2A0FB54500B8202C /* CategoryItemView.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -157,6 +157,8 @@
 		640F061F2A0FB64100B8202C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				640F061D2A0FB54500B8202C /* CategoryItemView.swift */,
+				640F061B2A0FA84C00B8202C /* CategoriesMainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,7 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				640F06352A0FBB1400B8202C /* App */,
-				640F06362A0FBB1E00B8202C /* ReusableViews */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -225,14 +226,6 @@
 				640102D92A0E813C006CE9B2 /* rstturApp.swift */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		640F06362A0FBB1E00B8202C /* ReusableViews */ = {
-			isa = PBXGroup;
-			children = (
-				640102DB2A0E813C006CE9B2 /* GradientView.swift */,
-			);
-			path = ReusableViews;
 			sourceTree = "<group>";
 		};
 		640F06372A0FBB7C00B8202C /* Network */ = {
@@ -248,7 +241,9 @@
 		640F06382A0FBB8B00B8202C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				640F06392A0FBBA900B8202C /* UIColor_HEX.swift */,
+				640F06392A0FBBA900B8202C /* Color_from_hex.swift */,
+				64F874EE2A10516700064F56 /* LinearGradient_init.swift */,
+				64F874F02A1051FD00064F56 /* Dictionary_to_LinearGradient.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -448,17 +443,18 @@
 				640F062E2A0FB8EA00B8202C /* PlacesItemView.swift in Sources */,
 				640F061C2A0FA84C00B8202C /* CategoriesMainView.swift in Sources */,
 				640F063C2A0FBC1200B8202C /* NetworkModels.swift in Sources */,
+				64F874EF2A10516700064F56 /* LinearGradient_init.swift in Sources */,
+				64F874F12A1051FD00064F56 /* Dictionary_to_LinearGradient.swift in Sources */,
 				640F06302A0FB95300B8202C /* PlacesViewModel.swift in Sources */,
 				640F061E2A0FB54500B8202C /* CategoryItemView.swift in Sources */,
 				640F06402A0FBCDE00B8202C /* BackendNetworkService.swift in Sources */,
 				640F06232A0FB67300B8202C /* CategoryViewModel.swift in Sources */,
-				640102DC2A0E813C006CE9B2 /* GradientView.swift in Sources */,
 				640102DA2A0E813C006CE9B2 /* rstturApp.swift in Sources */,
 				64F874DA2A0FED9A00064F56 /* Env_Colors_Gradient.swift in Sources */,
 				640F062C2A0FB87900B8202C /* PlacesListMainView.swift in Sources */,
 				640F063E2A0FBCCA00B8202C /* DeeplinkService.swift in Sources */,
 				64F874D02A0FD5EB00064F56 /* Env_Colors_Regular.swift in Sources */,
-				640F063A2A0FBBA900B8202C /* UIColor_HEX.swift in Sources */,
+				640F063A2A0FBBA900B8202C /* Color_from_hex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
