@@ -25,3 +25,9 @@ struct GradientView: View {
         return UnitPoint(x: CGFloat(x), y: CGFloat(y))
     }
 }
+
+struct GradientModel {
+    let angle: Angle
+    let startColor: Color
+    let endColor: Color
+}

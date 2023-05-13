@@ -1,12 +1,13 @@
 # Input path
-input_dir: rsttur/Resources/Colors
+input_dir: rsttur/Resources
+
 # Output path
 output_dir: rsttur/Resources/Generated
 
-# Parse
+# Generate regular color
 colors:
   inputs:
-    - Env_Colors_Regular.txt
+    - Colors_txt/Env_Colors_Regular.txt
   outputs:
     output: Env_Colors_Regular.swift
     templateName: swift5
@@ -21,3 +22,6 @@ colors:
     delimiter: ":"
     key_column: 1
     value_column: 2
+
+# Generate gradient color
+

@@ -1,0 +1,17 @@
+import UIKit
+
+{% if publicAccess %}public{% endif %} struct GradientColors {
+{% for gradient in gradients %}
+{% if publicAccess %}public{% endif %} static let {{ gradient.name|swiftIdentifier }}: CAGradientLayer = {
+    let gradient = CAGradientLayer()
+    gradient.colors = [
+        UIColor(hexString: "{{ gradient.startColor }}").cgColor,
+        UIColor(hexString: "{{ gradient.endColor }}").cgColor
+    ]
+    gradient.startPoint = CGPoint(x: 0.5, y: 0.0)
+    gradient.endPoint = CGPoint(x: 0.5, y: 1.0)
+    gradient.transform = CATransform3DMakeRotation({{ gradient.degrees }} * .pi / 180, 0, 0, 1)
+    return gradient
+}()
+{% endfor %}
+}

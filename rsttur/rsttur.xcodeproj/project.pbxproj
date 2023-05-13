@@ -26,8 +26,10 @@
 		640F06402A0FBCDE00B8202C /* BackendNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F063F2A0FBCDE00B8202C /* BackendNetworkService.swift */; };
 		64F874D02A0FD5EB00064F56 /* Env_Colors_Regular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F874CF2A0FD5EB00064F56 /* Env_Colors_Regular.swift */; };
 		64F874D32A0FE0F900064F56 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 64F874D22A0FE0F900064F56 /* swiftgen.yml */; };
-		64F874D82A0FED5800064F56 /* Env_Colors_Gradient in Resources */ = {isa = PBXBuildFile; fileRef = 64F874D72A0FED5800064F56 /* Env_Colors_Gradient */; };
+		64F874D82A0FED5800064F56 /* Env_Colors_Gradient.txt in Resources */ = {isa = PBXBuildFile; fileRef = 64F874D72A0FED5800064F56 /* Env_Colors_Gradient.txt */; };
 		64F874DA2A0FED9A00064F56 /* Env_Colors_Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F874D92A0FED9A00064F56 /* Env_Colors_Gradient.swift */; };
+		64F874DD2A0FFAA600064F56 /* GradientColor.stencil in Resources */ = {isa = PBXBuildFile; fileRef = 64F874DC2A0FFAA600064F56 /* GradientColor.stencil */; };
+		64F874E02A100D1800064F56 /* Env_Colors_Gradient.json in Resources */ = {isa = PBXBuildFile; fileRef = 64F874DF2A100D1800064F56 /* Env_Colors_Gradient.json */; };
 		9B7926725F6DC58715C8CEC9 /* Pods_rsttur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A4CFBFCFA95A18DDBAC192D /* Pods_rsttur.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,8 +55,10 @@
 		640F063F2A0FBCDE00B8202C /* BackendNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendNetworkService.swift; sourceTree = "<group>"; };
 		64F874CF2A0FD5EB00064F56 /* Env_Colors_Regular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env_Colors_Regular.swift; sourceTree = "<group>"; };
 		64F874D22A0FE0F900064F56 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
-		64F874D72A0FED5800064F56 /* Env_Colors_Gradient */ = {isa = PBXFileReference; lastKnownFileType = text; path = Env_Colors_Gradient; sourceTree = "<group>"; };
+		64F874D72A0FED5800064F56 /* Env_Colors_Gradient.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Env_Colors_Gradient.txt; sourceTree = "<group>"; };
 		64F874D92A0FED9A00064F56 /* Env_Colors_Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env_Colors_Gradient.swift; sourceTree = "<group>"; };
+		64F874DC2A0FFAA600064F56 /* GradientColor.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = GradientColor.stencil; sourceTree = "<group>"; };
+		64F874DF2A100D1800064F56 /* Env_Colors_Gradient.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Env_Colors_Gradient.json; sourceTree = "<group>"; };
 		9B2B666E1E3C40511091C86F /* Pods-rsttur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rsttur.debug.xcconfig"; path = "Target Support Files/Pods-rsttur/Pods-rsttur.debug.xcconfig"; sourceTree = "<group>"; };
 		FAA85B4B71EEBD9922733D62 /* Pods-rsttur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rsttur.release.xcconfig"; path = "Target Support Files/Pods-rsttur/Pods-rsttur.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,9 +117,10 @@
 		640102E82A0E81A6006CE9B2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				64F874D72A0FED5800064F56 /* Env_Colors_Gradient */,
+				64F874DE2A100CB000064F56 /* Colors_json */,
+				64F874DB2A0FFA2000064F56 /* Templates */,
 				64F874D42A0FED0600064F56 /* Assets */,
-				64F874D52A0FED0E00064F56 /* Colors */,
+				64F874D52A0FED0E00064F56 /* Colors_txt */,
 				64F874D62A0FED2500064F56 /* Generated */,
 			);
 			path = Resources;
@@ -260,12 +265,13 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		64F874D52A0FED0E00064F56 /* Colors */ = {
+		64F874D52A0FED0E00064F56 /* Colors_txt */ = {
 			isa = PBXGroup;
 			children = (
+				64F874D72A0FED5800064F56 /* Env_Colors_Gradient.txt */,
 				640F06262A0FB74500B8202C /* Env_Colors_Regular.txt */,
 			);
-			path = Colors;
+			path = Colors_txt;
 			sourceTree = "<group>";
 		};
 		64F874D62A0FED2500064F56 /* Generated */ = {
@@ -275,6 +281,22 @@
 				64F874D92A0FED9A00064F56 /* Env_Colors_Gradient.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		64F874DB2A0FFA2000064F56 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				64F874DC2A0FFAA600064F56 /* GradientColor.stencil */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		64F874DE2A100CB000064F56 /* Colors_json */ = {
+			isa = PBXGroup;
+			children = (
+				64F874DF2A100D1800064F56 /* Env_Colors_Gradient.json */,
+			);
+			path = Colors_json;
 			sourceTree = "<group>";
 		};
 		8E13E736A5A2008D48E8CC4F /* Pods */ = {
@@ -302,6 +324,7 @@
 			buildConfigurationList = 640102E42A0E8144006CE9B2 /* Build configuration list for PBXNativeTarget "rsttur" */;
 			buildPhases = (
 				F34DC5673FEAA221572456E8 /* [CP] Check Pods Manifest.lock */,
+				64F874E12A100EA400064F56 /* Convert txt to json */,
 				64F874CD2A0FCEFC00064F56 /* SwiftGen */,
 				640102D22A0E813C006CE9B2 /* Sources */,
 				640102D32A0E813C006CE9B2 /* Frameworks */,
@@ -354,8 +377,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64F874D82A0FED5800064F56 /* Env_Colors_Gradient in Resources */,
+				64F874D82A0FED5800064F56 /* Env_Colors_Gradient.txt in Resources */,
 				640102E12A0E8144006CE9B2 /* Preview Assets.xcassets in Resources */,
+				64F874E02A100D1800064F56 /* Env_Colors_Gradient.json in Resources */,
+				64F874DD2A0FFAA600064F56 /* GradientColor.stencil in Resources */,
 				640102DE2A0E8144006CE9B2 /* Assets.xcassets in Resources */,
 				640F06272A0FB74500B8202C /* Env_Colors_Regular.txt in Resources */,
 				64F874D32A0FE0F900064F56 /* swiftgen.yml in Resources */,
@@ -382,6 +407,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi \n";
+		};
+		64F874E12A100EA400064F56 /* Convert txt to json */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Convert txt to json";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\n\nINPUT_FILE=\"rsttur/Resources/Colors_txt/Env_Colors_Gradient.txt\"\nOUTPUT_FILE=\"rsttur/Resources/Colors_json/Env_Colors_Gradient.json\"\n\njsonArray=()\n\nregex=\"^([^:]+): linear-gradient\\(([0-9]+)deg, #([0-9a-fA-F]{6}) ([0-9]+)%, #([0-9a-fA-F]{6}) ([0-9]+)%\\)$\"\n\nwhile read line; do\n  if [[ $line =~ $regex ]]; then\n    name=\"${BASH_REMATCH[1]}\"\n    angle=\"${BASH_REMATCH[2]}\"\n    startColor=\"#${BASH_REMATCH[3]}\"\n    startColorAlpha=\"${BASH_REMATCH[4]}\"\n    endColor=\"#${BASH_REMATCH[5]}\"\n    endColorAlpha=\"${BASH_REMATCH[6]}\"\n  \n    jsonObject=\"{\\\"name\\\":\\\"$name\\\",\\\"angle\\\":\\\"$angle\\\",\\\"startColor\\\":\\\"$startColor\\\",\\\"startColorAlpha\\\":\\\"$startColorAlpha\\\",\\\"endColor\\\":\\\"$endColor\\\",\\\"endColorAlpha\\\":\\\"$endColorAlpha\\\"}\"\n    jsonArray+=(\"$jsonObject\")\n  fi\ndone < \"$INPUT_FILE\"\n\njson=\"[\"\nfor i in \"${!jsonArray[@]}\"; do\n  json+=\" ${jsonArray[$i]}\"\n  if [[ $i -lt ${#jsonArray[@]}-1 ]]; then\n    json+=\",\"\n  fi\ndone\njson+=\" ]\"\n\necho $json > $OUTPUT_FILE\n";
 		};
 		F34DC5673FEAA221572456E8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
