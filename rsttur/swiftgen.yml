@@ -1,0 +1,24 @@
+# Input path
+input_dir: rsttur/Resources
+# Output path
+output_dir: rsttur/Resources
+
+# Parse
+strings:
+  inputs:
+    - Env_Colors.txt
+  outputs:
+    output: Env_Colors.swift
+    templateName: structured-swift5
+    params:
+      enumName: ColorName
+      structName: Color
+      typeName: UIColor
+      publicAccess: true
+      indent: "  "
+      swiftversion: "5.0"
+  parser:
+    type: txt
+    delimiter: ":"
+    key_column: 1
+    value_column: 2

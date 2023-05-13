@@ -15,7 +15,7 @@
 		640F061E2A0FB54500B8202C /* CategoryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F061D2A0FB54500B8202C /* CategoryItemView.swift */; };
 		640F06232A0FB67300B8202C /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F06222A0FB67300B8202C /* CategoryViewModel.swift */; };
 		640F06252A0FB6C200B8202C /* CategoryItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F06242A0FB6C200B8202C /* CategoryItemModel.swift */; };
-		640F06272A0FB74500B8202C /* Colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 640F06262A0FB74500B8202C /* Colors.txt */; };
+		640F06272A0FB74500B8202C /* Env_Colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 640F06262A0FB74500B8202C /* Env_Colors.txt */; };
 		640F062C2A0FB87900B8202C /* PlacesListMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F062B2A0FB87900B8202C /* PlacesListMainView.swift */; };
 		640F062E2A0FB8EA00B8202C /* PlacesItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F062D2A0FB8EA00B8202C /* PlacesItemView.swift */; };
 		640F06302A0FB95300B8202C /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F062F2A0FB95300B8202C /* PlacesViewModel.swift */; };
@@ -24,9 +24,13 @@
 		640F063C2A0FBC1200B8202C /* NetworkModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F063B2A0FBC1200B8202C /* NetworkModels.swift */; };
 		640F063E2A0FBCCA00B8202C /* DeeplinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F063D2A0FBCCA00B8202C /* DeeplinkService.swift */; };
 		640F06402A0FBCDE00B8202C /* BackendNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F063F2A0FBCDE00B8202C /* BackendNetworkService.swift */; };
+		64F874D02A0FD5EB00064F56 /* Env_Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F874CF2A0FD5EB00064F56 /* Env_Colors.swift */; };
+		64F874D32A0FE0F900064F56 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 64F874D22A0FE0F900064F56 /* swiftgen.yml */; };
+		9B7926725F6DC58715C8CEC9 /* Pods_rsttur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A4CFBFCFA95A18DDBAC192D /* Pods_rsttur.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A4CFBFCFA95A18DDBAC192D /* Pods_rsttur.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rsttur.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		640102D62A0E813C006CE9B2 /* rsttur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rsttur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		640102D92A0E813C006CE9B2 /* rstturApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rstturApp.swift; sourceTree = "<group>"; };
 		640102DB2A0E813C006CE9B2 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -36,7 +40,7 @@
 		640F061D2A0FB54500B8202C /* CategoryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemView.swift; sourceTree = "<group>"; };
 		640F06222A0FB67300B8202C /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		640F06242A0FB6C200B8202C /* CategoryItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemModel.swift; sourceTree = "<group>"; };
-		640F06262A0FB74500B8202C /* Colors.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Colors.txt; sourceTree = "<group>"; };
+		640F06262A0FB74500B8202C /* Env_Colors.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Env_Colors.txt; sourceTree = "<group>"; };
 		640F062B2A0FB87900B8202C /* PlacesListMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListMainView.swift; sourceTree = "<group>"; };
 		640F062D2A0FB8EA00B8202C /* PlacesItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesItemView.swift; sourceTree = "<group>"; };
 		640F062F2A0FB95300B8202C /* PlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewModel.swift; sourceTree = "<group>"; };
@@ -45,6 +49,10 @@
 		640F063B2A0FBC1200B8202C /* NetworkModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModels.swift; sourceTree = "<group>"; };
 		640F063D2A0FBCCA00B8202C /* DeeplinkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkService.swift; sourceTree = "<group>"; };
 		640F063F2A0FBCDE00B8202C /* BackendNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendNetworkService.swift; sourceTree = "<group>"; };
+		64F874CF2A0FD5EB00064F56 /* Env_Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env_Colors.swift; sourceTree = "<group>"; };
+		64F874D22A0FE0F900064F56 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		9B2B666E1E3C40511091C86F /* Pods-rsttur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rsttur.debug.xcconfig"; path = "Target Support Files/Pods-rsttur/Pods-rsttur.debug.xcconfig"; sourceTree = "<group>"; };
+		FAA85B4B71EEBD9922733D62 /* Pods-rsttur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rsttur.release.xcconfig"; path = "Target Support Files/Pods-rsttur/Pods-rsttur.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B7926725F6DC58715C8CEC9 /* Pods_rsttur.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,8 +70,11 @@
 		640102CD2A0E813C006CE9B2 = {
 			isa = PBXGroup;
 			children = (
+				64F874D22A0FE0F900064F56 /* swiftgen.yml */,
 				640102D82A0E813C006CE9B2 /* rsttur */,
 				640102D72A0E813C006CE9B2 /* Products */,
+				8E13E736A5A2008D48E8CC4F /* Pods */,
+				C1344CE578DE975CB95DF96E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,9 +109,10 @@
 		640102E82A0E81A6006CE9B2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				640F06262A0FB74500B8202C /* Colors.txt */,
 				640102E02A0E8144006CE9B2 /* Preview Assets.xcassets */,
 				640102DD2A0E8144006CE9B2 /* Assets.xcassets */,
+				640F06262A0FB74500B8202C /* Env_Colors.txt */,
+				64F874CF2A0FD5EB00064F56 /* Env_Colors.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -234,6 +247,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		8E13E736A5A2008D48E8CC4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B2B666E1E3C40511091C86F /* Pods-rsttur.debug.xcconfig */,
+				FAA85B4B71EEBD9922733D62 /* Pods-rsttur.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C1344CE578DE975CB95DF96E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A4CFBFCFA95A18DDBAC192D /* Pods_rsttur.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -241,6 +271,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 640102E42A0E8144006CE9B2 /* Build configuration list for PBXNativeTarget "rsttur" */;
 			buildPhases = (
+				F34DC5673FEAA221572456E8 /* [CP] Check Pods Manifest.lock */,
+				64F874CD2A0FCEFC00064F56 /* SwiftGen */,
 				640102D22A0E813C006CE9B2 /* Sources */,
 				640102D32A0E813C006CE9B2 /* Frameworks */,
 				640102D42A0E813C006CE9B2 /* Resources */,
@@ -294,11 +326,55 @@
 			files = (
 				640102E12A0E8144006CE9B2 /* Preview Assets.xcassets in Resources */,
 				640102DE2A0E8144006CE9B2 /* Assets.xcassets in Resources */,
-				640F06272A0FB74500B8202C /* Colors.txt in Resources */,
+				640F06272A0FB74500B8202C /* Env_Colors.txt in Resources */,
+				64F874D32A0FE0F900064F56 /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		64F874CD2A0FCEFC00064F56 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi \n";
+		};
+		F34DC5673FEAA221572456E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-rsttur-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		640102D22A0E813C006CE9B2 /* Sources */ = {
@@ -318,6 +394,7 @@
 				640102DA2A0E813C006CE9B2 /* rstturApp.swift in Sources */,
 				640F062C2A0FB87900B8202C /* PlacesListMainView.swift in Sources */,
 				640F063E2A0FBCCA00B8202C /* DeeplinkService.swift in Sources */,
+				64F874D02A0FD5EB00064F56 /* Env_Colors.swift in Sources */,
 				640F063A2A0FBBA900B8202C /* UIColor_HEX.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +522,7 @@
 		};
 		640102E52A0E8144006CE9B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B2B666E1E3C40511091C86F /* Pods-rsttur.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -476,6 +554,7 @@
 		};
 		640102E62A0E8144006CE9B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAA85B4B71EEBD9922733D62 /* Pods-rsttur.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
