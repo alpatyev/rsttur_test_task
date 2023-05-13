@@ -24,4 +24,12 @@ colors:
     value_column: 2
 
 # Generate gradient color
-
+json:
+  inputs:
+    - Colors_json/Env_Colors_Gradient.json
+  outputs:
+    output: Env_Colors_Gradient.swift
+    templateName: inline-swift5
+    params:
+      publicAccess: true
+      swiftVersion: "5.0"
