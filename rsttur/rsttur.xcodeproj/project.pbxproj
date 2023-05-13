@@ -15,7 +15,7 @@
 		640F061E2A0FB54500B8202C /* CategoryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F061D2A0FB54500B8202C /* CategoryItemView.swift */; };
 		640F06232A0FB67300B8202C /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F06222A0FB67300B8202C /* CategoryViewModel.swift */; };
 		640F06252A0FB6C200B8202C /* CategoryItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F06242A0FB6C200B8202C /* CategoryItemModel.swift */; };
-		640F06272A0FB74500B8202C /* Env_Colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 640F06262A0FB74500B8202C /* Env_Colors.txt */; };
+		640F06272A0FB74500B8202C /* Env_Colors_Regular.txt in Resources */ = {isa = PBXBuildFile; fileRef = 640F06262A0FB74500B8202C /* Env_Colors_Regular.txt */; };
 		640F062C2A0FB87900B8202C /* PlacesListMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F062B2A0FB87900B8202C /* PlacesListMainView.swift */; };
 		640F062E2A0FB8EA00B8202C /* PlacesItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F062D2A0FB8EA00B8202C /* PlacesItemView.swift */; };
 		640F06302A0FB95300B8202C /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F062F2A0FB95300B8202C /* PlacesViewModel.swift */; };
@@ -24,8 +24,10 @@
 		640F063C2A0FBC1200B8202C /* NetworkModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F063B2A0FBC1200B8202C /* NetworkModels.swift */; };
 		640F063E2A0FBCCA00B8202C /* DeeplinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F063D2A0FBCCA00B8202C /* DeeplinkService.swift */; };
 		640F06402A0FBCDE00B8202C /* BackendNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F063F2A0FBCDE00B8202C /* BackendNetworkService.swift */; };
-		64F874D02A0FD5EB00064F56 /* Env_Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F874CF2A0FD5EB00064F56 /* Env_Colors.swift */; };
+		64F874D02A0FD5EB00064F56 /* Env_Colors_Regular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F874CF2A0FD5EB00064F56 /* Env_Colors_Regular.swift */; };
 		64F874D32A0FE0F900064F56 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 64F874D22A0FE0F900064F56 /* swiftgen.yml */; };
+		64F874D82A0FED5800064F56 /* Env_Colors_Gradient in Resources */ = {isa = PBXBuildFile; fileRef = 64F874D72A0FED5800064F56 /* Env_Colors_Gradient */; };
+		64F874DA2A0FED9A00064F56 /* Env_Colors_Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F874D92A0FED9A00064F56 /* Env_Colors_Gradient.swift */; };
 		9B7926725F6DC58715C8CEC9 /* Pods_rsttur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A4CFBFCFA95A18DDBAC192D /* Pods_rsttur.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +42,7 @@
 		640F061D2A0FB54500B8202C /* CategoryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemView.swift; sourceTree = "<group>"; };
 		640F06222A0FB67300B8202C /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		640F06242A0FB6C200B8202C /* CategoryItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemModel.swift; sourceTree = "<group>"; };
-		640F06262A0FB74500B8202C /* Env_Colors.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Env_Colors.txt; sourceTree = "<group>"; };
+		640F06262A0FB74500B8202C /* Env_Colors_Regular.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Env_Colors_Regular.txt; sourceTree = "<group>"; };
 		640F062B2A0FB87900B8202C /* PlacesListMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListMainView.swift; sourceTree = "<group>"; };
 		640F062D2A0FB8EA00B8202C /* PlacesItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesItemView.swift; sourceTree = "<group>"; };
 		640F062F2A0FB95300B8202C /* PlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewModel.swift; sourceTree = "<group>"; };
@@ -49,8 +51,10 @@
 		640F063B2A0FBC1200B8202C /* NetworkModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModels.swift; sourceTree = "<group>"; };
 		640F063D2A0FBCCA00B8202C /* DeeplinkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkService.swift; sourceTree = "<group>"; };
 		640F063F2A0FBCDE00B8202C /* BackendNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendNetworkService.swift; sourceTree = "<group>"; };
-		64F874CF2A0FD5EB00064F56 /* Env_Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env_Colors.swift; sourceTree = "<group>"; };
+		64F874CF2A0FD5EB00064F56 /* Env_Colors_Regular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env_Colors_Regular.swift; sourceTree = "<group>"; };
 		64F874D22A0FE0F900064F56 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		64F874D72A0FED5800064F56 /* Env_Colors_Gradient */ = {isa = PBXFileReference; lastKnownFileType = text; path = Env_Colors_Gradient; sourceTree = "<group>"; };
+		64F874D92A0FED9A00064F56 /* Env_Colors_Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env_Colors_Gradient.swift; sourceTree = "<group>"; };
 		9B2B666E1E3C40511091C86F /* Pods-rsttur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rsttur.debug.xcconfig"; path = "Target Support Files/Pods-rsttur/Pods-rsttur.debug.xcconfig"; sourceTree = "<group>"; };
 		FAA85B4B71EEBD9922733D62 /* Pods-rsttur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rsttur.release.xcconfig"; path = "Target Support Files/Pods-rsttur/Pods-rsttur.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,10 +113,10 @@
 		640102E82A0E81A6006CE9B2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				640102E02A0E8144006CE9B2 /* Preview Assets.xcassets */,
-				640102DD2A0E8144006CE9B2 /* Assets.xcassets */,
-				640F06262A0FB74500B8202C /* Env_Colors.txt */,
-				64F874CF2A0FD5EB00064F56 /* Env_Colors.swift */,
+				64F874D72A0FED5800064F56 /* Env_Colors_Gradient */,
+				64F874D42A0FED0600064F56 /* Assets */,
+				64F874D52A0FED0E00064F56 /* Colors */,
+				64F874D62A0FED2500064F56 /* Generated */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -247,6 +251,32 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		64F874D42A0FED0600064F56 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				640102DD2A0E8144006CE9B2 /* Assets.xcassets */,
+				640102E02A0E8144006CE9B2 /* Preview Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		64F874D52A0FED0E00064F56 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				640F06262A0FB74500B8202C /* Env_Colors_Regular.txt */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		64F874D62A0FED2500064F56 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				64F874CF2A0FD5EB00064F56 /* Env_Colors_Regular.swift */,
+				64F874D92A0FED9A00064F56 /* Env_Colors_Gradient.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		8E13E736A5A2008D48E8CC4F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,9 +354,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64F874D82A0FED5800064F56 /* Env_Colors_Gradient in Resources */,
 				640102E12A0E8144006CE9B2 /* Preview Assets.xcassets in Resources */,
 				640102DE2A0E8144006CE9B2 /* Assets.xcassets in Resources */,
-				640F06272A0FB74500B8202C /* Env_Colors.txt in Resources */,
+				640F06272A0FB74500B8202C /* Env_Colors_Regular.txt in Resources */,
 				64F874D32A0FE0F900064F56 /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,9 +423,10 @@
 				640F06232A0FB67300B8202C /* CategoryViewModel.swift in Sources */,
 				640102DC2A0E813C006CE9B2 /* GradientView.swift in Sources */,
 				640102DA2A0E813C006CE9B2 /* rstturApp.swift in Sources */,
+				64F874DA2A0FED9A00064F56 /* Env_Colors_Gradient.swift in Sources */,
 				640F062C2A0FB87900B8202C /* PlacesListMainView.swift in Sources */,
 				640F063E2A0FBCCA00B8202C /* DeeplinkService.swift in Sources */,
-				64F874D02A0FD5EB00064F56 /* Env_Colors.swift in Sources */,
+				64F874D02A0FD5EB00064F56 /* Env_Colors_Regular.swift in Sources */,
 				640F063A2A0FBBA900B8202C /* UIColor_HEX.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
