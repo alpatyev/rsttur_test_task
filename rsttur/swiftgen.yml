@@ -1,0 +1,36 @@
+# Input path
+input_dir: rsttur/Resources
+
+# Output path
+output_dir: rsttur/Resources/Generated
+
+# Generate regular color
+colors:
+  inputs:
+    - Colors_txt/Env_Colors_Regular.txt
+  outputs:
+    output: Env_Colors_Regular.swift
+    templateName: swift5
+    params:
+      enumName: Env_Colors
+      publicAccess: true
+      indent: "  "
+      swiftversion: "5.0"
+      colorAliasName: Env_Color
+  parser:
+    type: txt
+    delimiter: ":"
+    key_column: 1
+    value_column: 2
+
+# Generate gradient color
+json:
+  inputs:
+    - Colors_json/Env_Colors_Gradient.json
+  outputs:
+    output: Env_Colors_Gradient.swift
+    templateName: inline-swift5
+    params:
+      enumName: Env_Gradients
+      publicAccess: true
+      swiftVersion: "5.0"
