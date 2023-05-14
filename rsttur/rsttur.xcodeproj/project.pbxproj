@@ -30,6 +30,7 @@
 		64F874E02A100D1800064F56 /* Env_Colors_Gradient.json in Resources */ = {isa = PBXBuildFile; fileRef = 64F874DF2A100D1800064F56 /* Env_Colors_Gradient.json */; };
 		64F874EF2A10516700064F56 /* LinearGradient_init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F874EE2A10516700064F56 /* LinearGradient_init.swift */; };
 		64F874F12A1051FD00064F56 /* Dictionary_to_LinearGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F874F02A1051FD00064F56 /* Dictionary_to_LinearGradient.swift */; };
+		64F874F82A1158BA00064F56 /* LinearGradientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F874F72A1158BA00064F56 /* LinearGradientModel.swift */; };
 		9B7926725F6DC58715C8CEC9 /* Pods_rsttur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A4CFBFCFA95A18DDBAC192D /* Pods_rsttur.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		64F874DF2A100D1800064F56 /* Env_Colors_Gradient.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Env_Colors_Gradient.json; sourceTree = "<group>"; };
 		64F874EE2A10516700064F56 /* LinearGradient_init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearGradient_init.swift; sourceTree = "<group>"; };
 		64F874F02A1051FD00064F56 /* Dictionary_to_LinearGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary_to_LinearGradient.swift; sourceTree = "<group>"; };
+		64F874F72A1158BA00064F56 /* LinearGradientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearGradientModel.swift; sourceTree = "<group>"; };
 		9B2B666E1E3C40511091C86F /* Pods-rsttur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rsttur.debug.xcconfig"; path = "Target Support Files/Pods-rsttur/Pods-rsttur.debug.xcconfig"; sourceTree = "<group>"; };
 		FAA85B4B71EEBD9922733D62 /* Pods-rsttur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rsttur.release.xcconfig"; path = "Target Support Files/Pods-rsttur/Pods-rsttur.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				640F06352A0FBB1400B8202C /* App */,
+				64F874F62A11589900064F56 /* Models */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -281,6 +284,14 @@
 				64F874DF2A100D1800064F56 /* Env_Colors_Gradient.json */,
 			);
 			path = Colors_json;
+			sourceTree = "<group>";
+		};
+		64F874F62A11589900064F56 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				64F874F72A1158BA00064F56 /* LinearGradientModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		8E13E736A5A2008D48E8CC4F /* Pods */ = {
@@ -442,6 +453,7 @@
 				640F06252A0FB6C200B8202C /* CategoryItemModel.swift in Sources */,
 				640F062E2A0FB8EA00B8202C /* PlacesItemView.swift in Sources */,
 				640F061C2A0FA84C00B8202C /* CategoriesMainView.swift in Sources */,
+				64F874F82A1158BA00064F56 /* LinearGradientModel.swift in Sources */,
 				640F063C2A0FBC1200B8202C /* NetworkModels.swift in Sources */,
 				64F874EF2A10516700064F56 /* LinearGradient_init.swift in Sources */,
 				64F874F12A1051FD00064F56 /* Dictionary_to_LinearGradient.swift in Sources */,

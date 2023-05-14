@@ -6,7 +6,7 @@ import SwiftUI
 struct rstturApp: App {
     var body: some Scene {
         WindowGroup {
-            Env_Gradients.g11.linearGradient()
+            Env_Gradients.g09.linearGradient()
         }
     }
 }
