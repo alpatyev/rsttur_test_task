@@ -26,7 +26,8 @@
 		641417EA2A127E3D00CA30CB /* Сolor_from_generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641417E92A127E3D00CA30CB /* Сolor_from_generated.swift */; };
 		641417EC2A1285D500CA30CB /* Color_from_rgba.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641417EB2A1285D500CA30CB /* Color_from_rgba.swift */; };
 		641417F42A128F6C00CA30CB /* Color_from_rgba.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641417F32A128F6C00CA30CB /* Color_from_rgba.swift */; };
-		64F874D02A0FD5EB00064F56 /* Env_Colors_Regular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F874CF2A0FD5EB00064F56 /* Env_Colors_Regular.swift */; };
+		64A5EA922A12959A00AFBA5D /* Env_Colors_Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5EA912A12959A00AFBA5D /* Env_Colors_Dictionary.swift */; };
+		64F874D02A0FD5EB00064F56 /* Env_Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F874CF2A0FD5EB00064F56 /* Env_Colors.swift */; };
 		64F874D32A0FE0F900064F56 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 64F874D22A0FE0F900064F56 /* swiftgen.yml */; };
 		64F874D82A0FED5800064F56 /* Env_Colors_Gradient.txt in Resources */ = {isa = PBXBuildFile; fileRef = 64F874D72A0FED5800064F56 /* Env_Colors_Gradient.txt */; };
 		64F874DA2A0FED9A00064F56 /* Env_Colors_Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F874D92A0FED9A00064F56 /* Env_Colors_Gradient.swift */; };
@@ -63,7 +64,8 @@
 		641417E92A127E3D00CA30CB /* Сolor_from_generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Сolor_from_generated.swift"; sourceTree = "<group>"; };
 		641417EB2A1285D500CA30CB /* Color_from_rgba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Color_from_rgba.swift; path = ../../../../../../../../../Documents/Color_from_rgba.swift; sourceTree = "<group>"; };
 		641417F32A128F6C00CA30CB /* Color_from_rgba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Color_from_rgba.swift; path = ../../../../../../../../../../Documents/Color_from_rgba.swift; sourceTree = "<group>"; };
-		64F874CF2A0FD5EB00064F56 /* Env_Colors_Regular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env_Colors_Regular.swift; sourceTree = "<group>"; };
+		64A5EA912A12959A00AFBA5D /* Env_Colors_Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env_Colors_Dictionary.swift; sourceTree = "<group>"; };
+		64F874CF2A0FD5EB00064F56 /* Env_Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env_Colors.swift; sourceTree = "<group>"; };
 		64F874D22A0FE0F900064F56 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		64F874D72A0FED5800064F56 /* Env_Colors_Gradient.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Env_Colors_Gradient.txt; sourceTree = "<group>"; };
 		64F874D92A0FED9A00064F56 /* Env_Colors_Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env_Colors_Gradient.swift; sourceTree = "<group>"; };
@@ -133,9 +135,9 @@
 		640102E82A0E81A6006CE9B2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				64F874DE2A100CB000064F56 /* Colors_json */,
 				64F874D42A0FED0600064F56 /* Assets */,
 				64F874D52A0FED0E00064F56 /* Colors_txt */,
+				64F874DE2A100CB000064F56 /* Colors_json */,
 				64F874D62A0FED2500064F56 /* Generated */,
 			);
 			path = Resources;
@@ -308,8 +310,9 @@
 		64F874D62A0FED2500064F56 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
-				64F874CF2A0FD5EB00064F56 /* Env_Colors_Regular.swift */,
+				64F874CF2A0FD5EB00064F56 /* Env_Colors.swift */,
 				64F874D92A0FED9A00064F56 /* Env_Colors_Gradient.swift */,
+				64A5EA912A12959A00AFBA5D /* Env_Colors_Dictionary.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 			buildPhases = (
 				F34DC5673FEAA221572456E8 /* [CP] Check Pods Manifest.lock */,
 				64F874E12A100EA400064F56 /* Convert txt to json */,
+				64A5EA932A12965B00AFBA5D /* Generate colors dictionary */,
 				64F874CD2A0FCEFC00064F56 /* SwiftGen */,
 				640102D22A0E813C006CE9B2 /* Sources */,
 				640102D32A0E813C006CE9B2 /* Frameworks */,
@@ -429,6 +433,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		64A5EA932A12965B00AFBA5D /* Generate colors dictionary */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate colors dictionary";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\n\nINPUT_FILE=\"rsttur/Resources/Colors_txt/Env_Colors_Regular.txt\"\nOUTPUT_FILE=\"rsttur/Resources/Generated/Env_Colors_Dictionary.swift\"\n\necho \"\" > $OUTPUT_FILE\necho \"// MARK: - Generated dictionary\" >> $OUTPUT_FILE\necho \"\" >> $OUTPUT_FILE\necho \"struct Env_Colors_Dictionary {\" >> $OUTPUT_FILE\necho \"    public static let colors: [String: String] = [\" >> $OUTPUT_FILE\n\nregex=\"^([^:]+): #([0-9a-fA-F]{6})$\"\n\nwhile read line; do\n  if [[ $line =~ $regex ]]; then\n    name=\"${BASH_REMATCH[1]}\"\n    color=\"${BASH_REMATCH[2]}\"\n    \n    echo \"        \\\"$name\\\": \\\"#$color\\\",\" >> $OUTPUT_FILE\n  fi\ndone < \"$INPUT_FILE\"\n\necho \"    ]\" >> $OUTPUT_FILE\necho \"}\" >> $OUTPUT_FILE\n\n";
+		};
 		64F874CD2A0FCEFC00064F56 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -495,6 +517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				640F06322A0FB99F00B8202C /* PlaceItemModel.swift in Sources */,
+				64A5EA922A12959A00AFBA5D /* Env_Colors_Dictionary.swift in Sources */,
 				640F06252A0FB6C200B8202C /* CategoryItemModel.swift in Sources */,
 				640F062E2A0FB8EA00B8202C /* PlacesItemView.swift in Sources */,
 				640F061C2A0FA84C00B8202C /* CategoriesMainView.swift in Sources */,
@@ -516,7 +539,7 @@
 				64F875042A11735300064F56 /* BackendNetworkErrors.swift in Sources */,
 				64F874FC2A11662800064F56 /* BackendURLBuilder.swift in Sources */,
 				640F063E2A0FBCCA00B8202C /* DeeplinkService.swift in Sources */,
-				64F874D02A0FD5EB00064F56 /* Env_Colors_Regular.swift in Sources */,
+				64F874D02A0FD5EB00064F56 /* Env_Colors.swift in Sources */,
 				64F875022A1167AB00064F56 /* BackendRequestType.swift in Sources */,
 				640F063A2A0FBBA900B8202C /* Color_from_hex.swift in Sources */,
 			);

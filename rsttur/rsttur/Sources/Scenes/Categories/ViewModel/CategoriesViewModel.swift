@@ -15,8 +15,8 @@ final class CategoriesViewModel: ObservableObject {
         networkService.fetchRequest(requestType: .objectsList) { [weak self] (model: ResponseDataModel?, _) in
             if let result = model {
                 self?.updateCategories(from: result.categories)
+                result.categories.forEach { print($0.color )}
             }
-            
         }
     }
     
@@ -29,6 +29,8 @@ final class CategoriesViewModel: ObservableObject {
     }
     
     private func convertServerModelToCategory(_ model: CategoryDataModel) -> CategoryItemModel? {
-        CategoryItemModel(categoryName: model.name, count: model.count, countCircleColor: "white")
+        CategoryItemModel(categoryName: model.name,
+                          count: model.count,
+                          countCircleColor: model.color)
     }
 }
