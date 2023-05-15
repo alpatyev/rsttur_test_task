@@ -4,6 +4,8 @@ import Foundation
 
 protocol BackendNetworkServiceProtocol {
     func fetchRequest<ExpectedType: Decodable>(requestType: BackendRequestType, completion: @escaping (ExpectedType?, BackendNetworkError?) -> ())
+    func fetchImageData(urls: [String], completion: @escaping ([Data]?) -> ())
+    func interruptImageTasks()
 }
 
 // MARK: - "Backend" network service
@@ -13,6 +15,7 @@ final class BackendNetworkService: BackendNetworkServiceProtocol {
     private let session = URLSession.shared
     private let urlBuilder: BackendURLBuilderProtocol
     private let requestBuilder: BackendRequestBuilderProtocol
+    private var imagesTasksGroup = DispatchGroup()
     
     init() {
         urlBuilder = BackendURLBuilder()
@@ -52,5 +55,33 @@ final class BackendNetworkService: BackendNetworkServiceProtocol {
         }
         
         newTask.resume()
+    }
+    
+    func fetchImageData(urls: [String], completion: @escaping ([Data]?) -> ()) {
+        var imageDataDict = [String: Data]()
+        
+        for url in urls {
+            guard let imageURL = URL(string: url) else { continue }
+            imagesTasksGroup.enter()
+            
+            URLSession.shared.dataTask(with: imageURL) { [weak self] (data, response, error) in
+                defer { self?.imagesTasksGroup.leave() }
+                            
+                if let imageData = data  {
+                    imageDataDict[url] = imageData
+                }
+            }.resume()
+        }
+        
+        imagesTasksGroup.notify(queue: DispatchQueue.main) {
+            let imageDataArray = urls.map { imageDataDict[$0] ?? Data() }
+            completion(imageDataArray)
+        }
+
+    }
+    
+    func interruptImageTasks() {
+        imagesTasksGroup = DispatchGroup()
+        session.invalidateAndCancel()
     }
 }

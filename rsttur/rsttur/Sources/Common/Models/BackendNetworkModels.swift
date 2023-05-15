@@ -10,7 +10,7 @@ struct BackendResponseContainer<CustomData: Decodable>: Decodable {
 
 struct ResponseDataModel: Decodable {
     let categories: [CategoryDataModel]
-    let objects: [ObjectDataModel]
+    let objects: [PlaceDataModel]
 }
 
 // MARK: - Category model
@@ -23,9 +23,9 @@ struct CategoryDataModel: Decodable {
     let count: Int
 }
 
-// MARK: - Object model
+// MARK: - Object model, also appeared in PlaceItemView
 
-struct ObjectDataModel: Decodable {
+struct PlaceDataModel: Decodable, Identifiable {
     let id: Int
     let name: String
     let description: String
@@ -37,6 +37,7 @@ struct ObjectDataModel: Decodable {
     let lat: Double
     let lon: Double
     let working_hours: [WorkingHoursDataModel]?
+    var imageData: Data?
 }
 
 // MARK: - Working hours model

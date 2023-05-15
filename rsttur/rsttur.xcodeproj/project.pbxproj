@@ -15,10 +15,8 @@
 		640F06232A0FB67300B8202C /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F06222A0FB67300B8202C /* CategoriesViewModel.swift */; };
 		640F06252A0FB6C200B8202C /* CategoryItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F06242A0FB6C200B8202C /* CategoryItemModel.swift */; };
 		640F06272A0FB74500B8202C /* Env_Colors_Regular.txt in Resources */ = {isa = PBXBuildFile; fileRef = 640F06262A0FB74500B8202C /* Env_Colors_Regular.txt */; };
-		640F062C2A0FB87900B8202C /* PlacesListMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F062B2A0FB87900B8202C /* PlacesListMainView.swift */; };
+		640F062C2A0FB87900B8202C /* PlacesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F062B2A0FB87900B8202C /* PlacesListView.swift */; };
 		640F062E2A0FB8EA00B8202C /* PlacesItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F062D2A0FB8EA00B8202C /* PlacesItemView.swift */; };
-		640F06302A0FB95300B8202C /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F062F2A0FB95300B8202C /* PlacesViewModel.swift */; };
-		640F06322A0FB99F00B8202C /* PlaceItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F06312A0FB99F00B8202C /* PlaceItemModel.swift */; };
 		640F063A2A0FBBA900B8202C /* Color_from_hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F06392A0FBBA900B8202C /* Color_from_hex.swift */; };
 		640F063C2A0FBC1200B8202C /* BackendNetworkModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F063B2A0FBC1200B8202C /* BackendNetworkModels.swift */; };
 		640F063E2A0FBCCA00B8202C /* DeeplinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F063D2A0FBCCA00B8202C /* DeeplinkService.swift */; };
@@ -27,6 +25,7 @@
 		641417EC2A1285D500CA30CB /* Color_from_rgba.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641417EB2A1285D500CA30CB /* Color_from_rgba.swift */; };
 		641417F42A128F6C00CA30CB /* Color_from_rgba.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641417F32A128F6C00CA30CB /* Color_from_rgba.swift */; };
 		64A5EA922A12959A00AFBA5D /* Env_Colors_Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5EA912A12959A00AFBA5D /* Env_Colors_Dictionary.swift */; };
+		64A5EA952A12AA8700AFBA5D /* SafePlaceImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5EA942A12AA8700AFBA5D /* SafePlaceImageView.swift */; };
 		64F874D02A0FD5EB00064F56 /* Env_Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F874CF2A0FD5EB00064F56 /* Env_Colors.swift */; };
 		64F874D32A0FE0F900064F56 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 64F874D22A0FE0F900064F56 /* swiftgen.yml */; };
 		64F874D82A0FED5800064F56 /* Env_Colors_Gradient.txt in Resources */ = {isa = PBXBuildFile; fileRef = 64F874D72A0FED5800064F56 /* Env_Colors_Gradient.txt */; };
@@ -53,10 +52,8 @@
 		640F06222A0FB67300B8202C /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		640F06242A0FB6C200B8202C /* CategoryItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemModel.swift; sourceTree = "<group>"; };
 		640F06262A0FB74500B8202C /* Env_Colors_Regular.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Env_Colors_Regular.txt; sourceTree = "<group>"; };
-		640F062B2A0FB87900B8202C /* PlacesListMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListMainView.swift; sourceTree = "<group>"; };
+		640F062B2A0FB87900B8202C /* PlacesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListView.swift; sourceTree = "<group>"; };
 		640F062D2A0FB8EA00B8202C /* PlacesItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesItemView.swift; sourceTree = "<group>"; };
-		640F062F2A0FB95300B8202C /* PlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewModel.swift; sourceTree = "<group>"; };
-		640F06312A0FB99F00B8202C /* PlaceItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceItemModel.swift; sourceTree = "<group>"; };
 		640F06392A0FBBA900B8202C /* Color_from_hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_from_hex.swift; sourceTree = "<group>"; };
 		640F063B2A0FBC1200B8202C /* BackendNetworkModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendNetworkModels.swift; sourceTree = "<group>"; };
 		640F063D2A0FBCCA00B8202C /* DeeplinkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkService.swift; sourceTree = "<group>"; };
@@ -65,6 +62,7 @@
 		641417EB2A1285D500CA30CB /* Color_from_rgba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Color_from_rgba.swift; path = ../../../../../../../../../Documents/Color_from_rgba.swift; sourceTree = "<group>"; };
 		641417F32A128F6C00CA30CB /* Color_from_rgba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Color_from_rgba.swift; path = ../../../../../../../../../../Documents/Color_from_rgba.swift; sourceTree = "<group>"; };
 		64A5EA912A12959A00AFBA5D /* Env_Colors_Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env_Colors_Dictionary.swift; sourceTree = "<group>"; };
+		64A5EA942A12AA8700AFBA5D /* SafePlaceImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafePlaceImageView.swift; sourceTree = "<group>"; };
 		64F874CF2A0FD5EB00064F56 /* Env_Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env_Colors.swift; sourceTree = "<group>"; };
 		64F874D22A0FE0F900064F56 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		64F874D72A0FED5800064F56 /* Env_Colors_Gradient.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Env_Colors_Gradient.txt; sourceTree = "<group>"; };
@@ -146,37 +144,29 @@
 		640102E92A0E81CA006CE9B2 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				640F06192A0FA6B500B8202C /* Categories */,
-				640F061A2A0FA6E000B8202C /* List */,
+				640F06192A0FA6B500B8202C /* ObjectsListScene */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		640F06192A0FA6B500B8202C /* Categories */ = {
+		640F06192A0FA6B500B8202C /* ObjectsListScene */ = {
 			isa = PBXGroup;
 			children = (
-				640F06212A0FB65500B8202C /* Model */,
+				640F06212A0FB65500B8202C /* Models */,
 				640F06202A0FB64D00B8202C /* ViewModel */,
 				640F061F2A0FB64100B8202C /* Views */,
 			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		640F061A2A0FA6E000B8202C /* List */ = {
-			isa = PBXGroup;
-			children = (
-				640F062A2A0FB80300B8202C /* Model */,
-				640F06292A0FB7FE00B8202C /* ViewModel */,
-				640F06282A0FB7F500B8202C /* Views */,
-			);
-			path = List;
+			path = ObjectsListScene;
 			sourceTree = "<group>";
 		};
 		640F061F2A0FB64100B8202C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				640F062D2A0FB8EA00B8202C /* PlacesItemView.swift */,
+				640F062B2A0FB87900B8202C /* PlacesListView.swift */,
 				640F061B2A0FA84C00B8202C /* CategoriesMainView.swift */,
 				640F061D2A0FB54500B8202C /* CategoryItemView.swift */,
+				64A5EA942A12AA8700AFBA5D /* SafePlaceImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,37 +179,12 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		640F06212A0FB65500B8202C /* Model */ = {
+		640F06212A0FB65500B8202C /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				640F06242A0FB6C200B8202C /* CategoryItemModel.swift */,
 			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		640F06282A0FB7F500B8202C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				640F062B2A0FB87900B8202C /* PlacesListMainView.swift */,
-				640F062D2A0FB8EA00B8202C /* PlacesItemView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		640F06292A0FB7FE00B8202C /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				640F062F2A0FB95300B8202C /* PlacesViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		640F062A2A0FB80300B8202C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				640F06312A0FB99F00B8202C /* PlaceItemModel.swift */,
-			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		640F06332A0FB9E300B8202C /* Services */ = {
@@ -516,7 +481,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				640F06322A0FB99F00B8202C /* PlaceItemModel.swift in Sources */,
 				64A5EA922A12959A00AFBA5D /* Env_Colors_Dictionary.swift in Sources */,
 				640F06252A0FB6C200B8202C /* CategoryItemModel.swift in Sources */,
 				640F062E2A0FB8EA00B8202C /* PlacesItemView.swift in Sources */,
@@ -529,13 +493,13 @@
 				641417EA2A127E3D00CA30CB /* Сolor_from_generated.swift in Sources */,
 				64F874EF2A10516700064F56 /* LinearGradient_init.swift in Sources */,
 				64F874F12A1051FD00064F56 /* Dictionary_to_LinearGradient.swift in Sources */,
-				640F06302A0FB95300B8202C /* PlacesViewModel.swift in Sources */,
 				640F061E2A0FB54500B8202C /* CategoryItemView.swift in Sources */,
 				640F06402A0FBCDE00B8202C /* BackendNetworkService.swift in Sources */,
 				640F06232A0FB67300B8202C /* CategoriesViewModel.swift in Sources */,
 				640102DA2A0E813C006CE9B2 /* rstturApp.swift in Sources */,
+				64A5EA952A12AA8700AFBA5D /* SafePlaceImageView.swift in Sources */,
 				64F874DA2A0FED9A00064F56 /* Env_Colors_Gradient.swift in Sources */,
-				640F062C2A0FB87900B8202C /* PlacesListMainView.swift in Sources */,
+				640F062C2A0FB87900B8202C /* PlacesListView.swift in Sources */,
 				64F875042A11735300064F56 /* BackendNetworkErrors.swift in Sources */,
 				64F874FC2A11662800064F56 /* BackendURLBuilder.swift in Sources */,
 				640F063E2A0FBCCA00B8202C /* DeeplinkService.swift in Sources */,

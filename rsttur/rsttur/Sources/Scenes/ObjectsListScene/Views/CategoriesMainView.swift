@@ -4,14 +4,14 @@ import SwiftUI
 
 struct CategoriesMainView: View {
     
-    @ObservedObject var viewModel: CategoriesViewModel
+    @StateObject var viewModel: CategoriesViewModel
     
     var body: some View {
         NavigationView {
             List() {
-                ForEach(viewModel.categories) { category in
+                ForEach(viewModel.categoriesList) { category in
                     NavigationLink(destination: {
-                        Text(category.categoryName)
+                        PlacesListView(selectedCategory: category.type, viewModel: viewModel)
                     }) {
                         CategoryItemView(model: category)
                     }
@@ -19,6 +19,9 @@ struct CategoriesMainView: View {
             }
             .listStyle(.plain)
             .navigationTitle("Категории")
+            .onAppear {
+                viewModel.categoriesListAppeared()
+            }
         }
         .navigationViewStyle(.stack)
     }
