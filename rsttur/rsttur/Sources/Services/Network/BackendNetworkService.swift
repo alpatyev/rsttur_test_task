@@ -3,7 +3,7 @@ import Foundation
 // MARK: - "Backend" protocol
 
 protocol BackendNetworkServiceProtocol {
-    func fetchRequest<ExpectedType: Decodable>(requestType: BackendRequestType, completion: @escaping(ExpectedType?) -> ())
+    func fetchRequest<ExpectedType: Decodable>(requestType: BackendRequestType, completion: @escaping (ExpectedType?, BackendNetworkError?) -> ())
 }
 
 // MARK: - "Backend" network service
@@ -18,14 +18,14 @@ final class BackendNetworkService: BackendNetworkServiceProtocol {
         urlBuilder = BackendURLBuilder()
         requestBuilder = BackendRequestBuilder()
         
-        self.fetchRequest(requestType: .objectsList) { (result: ResponseDataModel?) in
-            print(result?.categories)
+        self.fetchRequest(requestType: .objectsList) { (result: ResponseDataModel?, _) in
+            print(result?.categories ?? "-")
         }
     }
     
-    func fetchRequest<ExpectedType: Decodable>(requestType: BackendRequestType, completion: @escaping(ExpectedType?) -> ()) {
+    func fetchRequest<ExpectedType: Decodable>(requestType: BackendRequestType, completion: @escaping (ExpectedType?, BackendNetworkError?) -> ()) {
         guard let url = urlBuilder.createURL(using: requestType) else {
-            completion(nil)
+            completion(nil, .urlError("Invalid url for request: \(requestType.name)"))
             return
         }
         
@@ -33,30 +33,26 @@ final class BackendNetworkService: BackendNetworkServiceProtocol {
         
         let newTask = session.dataTask(with: request) { data, response, error in
             guard error == nil else {
-                completion(nil)
-                print("error response")
+                completion(nil, .serverError("Server error. Abort request with \(error?.localizedDescription ?? "")"))
                 return
             }
 
             guard let httpResponse = response as? HTTPURLResponse, 200...299 ~= httpResponse.statusCode else {
-                completion(nil)
-                print("invalid response")
+                completion(nil, .serverError("Invalid response \(response.debugDescription)"))
                 return
             }
             
             guard let responseData = data else {
-                completion(nil)
-                print("no data")
+                completion(nil, .serverError("No data for request: \(requestType.name)"))
                 return
             }
             
             do {
                 let result = try JSONDecoder().decode(BackendResponseContainer<ExpectedType>.self, from: responseData)
-                completion(result.data)
+                completion(result.data, nil)
             } catch let decodingError {
-                print(decodingError)
+                completion(nil, .decodingError(decodingError.localizedDescription))
             }
-          
         }
         
         newTask.resume()
