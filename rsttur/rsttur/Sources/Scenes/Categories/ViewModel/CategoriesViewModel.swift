@@ -16,6 +16,7 @@ final class CategoriesViewModel: ObservableObject {
             if let result = model {
                 self?.updateCategories(from: result.categories)
             }
+            
         }
     }
     

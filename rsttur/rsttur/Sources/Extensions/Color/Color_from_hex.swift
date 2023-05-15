@@ -1,6 +1,6 @@
 import SwiftUI
 
-// MARK: - Init Color from hex String
+// MARK: - Init Color from hex
 
 extension Color {
     init(hex: String, alpha: Double = 1.0) {

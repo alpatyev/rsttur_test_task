@@ -14,7 +14,7 @@ struct CategoryItemView: View {
             
             ZStack {
                 Circle()
-                    .foregroundColor(.red)
+                    .foregroundColor(Color(rgba: Env_Colors.cyan03.rgbaValue))
                     .frame(width: 30, height: 30)
                 Text("\(model.count)")
                     .foregroundColor(.white)
