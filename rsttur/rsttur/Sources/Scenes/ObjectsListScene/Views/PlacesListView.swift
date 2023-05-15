@@ -11,7 +11,7 @@ struct PlacesListView: View {
         List() {
             ForEach(viewModel.specificCategoryPlacesList) { place in
                 Button {
-                    print(place)
+                    viewModel.placeSelected(with: place.id)
                 } label: {
                     PlacesItemView(model: place)
                 }

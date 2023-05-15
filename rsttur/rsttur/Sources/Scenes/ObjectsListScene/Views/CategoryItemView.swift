@@ -16,6 +16,7 @@ struct CategoryItemView: View {
                 Circle()
                     .foregroundColor(Color(hex: Env_Colors_Dictionary.colors[model.countCircleColor]))
                     .frame(width: 30, height: 30)
+                
                 Text("\(model.count)")
                     .foregroundColor(.white)
                     .font(.headline)

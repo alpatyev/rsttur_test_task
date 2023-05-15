@@ -5,9 +5,11 @@ import Combine
 
 final class CategoriesViewModel: ObservableObject {
     
+    @Published var detailPlaceState = false
     @Published var categoriesList = [CategoryItemModel]()
     @Published var placesList = [PlaceDataModel]()
     @Published var specificCategoryPlacesList = [PlaceDataModel]()
+    @Published var selectedPlace = PlaceDataModel()
     
     private var networkService: BackendNetworkServiceProtocol
     private var cancellables = Set<AnyCancellable>()
@@ -23,9 +25,18 @@ final class CategoriesViewModel: ObservableObject {
     }
     
     func selectedCategoryAppeared(with name: String) {
-        DispatchQueue.main.async {
-            self.specificCategoryPlacesList = self.placesList.filter { $0.type == name }
+        DispatchQueue.main.async { [weak self] in
+            self?.specificCategoryPlacesList = self?.placesList.filter { $0.type == name } ?? []
+            self?.downloadImagesForSelectedCategory()
         }
+    }
+    
+    func placeSelected(with id: Int) {
+        detailPlaceState = true
+    }
+    
+    func detailPlaceViewTapped() {
+        detailPlaceState = false
     }
     
     private func initialFetchRequest() {
@@ -57,5 +68,18 @@ final class CategoriesViewModel: ObservableObject {
                           count: model.count,
                           countCircleColor: model.color)
     }
-
+    
+    private func downloadImagesForSelectedCategory() {
+        DispatchQueue.main.async { [weak self] in
+            let urlList = self?.specificCategoryPlacesList.map { $0.image }
+            self?.networkService.fetchImageData(urls: urlList ?? [], completion: { data in
+                if let imageData = data,
+                   self?.specificCategoryPlacesList.endIndex == imageData.endIndex {
+                    for (index, item) in imageData.enumerated() {
+                        self?.specificCategoryPlacesList[index].imageData = item
+                    }
+                }
+            })
+        }
+    }
 }

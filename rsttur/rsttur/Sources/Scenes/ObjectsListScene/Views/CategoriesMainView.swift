@@ -22,7 +22,18 @@ struct CategoriesMainView: View {
             .onAppear {
                 viewModel.categoriesListAppeared()
             }
+            
         }
         .navigationViewStyle(.stack)
+        .overlay(
+            Group {
+                if viewModel.detailPlaceState {                    
+                    DetailPlaceView(model: $viewModel.selectedPlace)
+                        .onTapGesture {
+                            viewModel.detailPlaceViewTapped()
+                        }
+                }
+            }
+        )
     }
 }
