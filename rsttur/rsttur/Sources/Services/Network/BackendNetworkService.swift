@@ -17,10 +17,6 @@ final class BackendNetworkService: BackendNetworkServiceProtocol {
     init() {
         urlBuilder = BackendURLBuilder()
         requestBuilder = BackendRequestBuilder()
-        
-        self.fetchRequest(requestType: .objectsList) { (result: ResponseDataModel?, _) in
-            print(result?.categories ?? "-")
-        }
     }
     
     func fetchRequest<ExpectedType: Decodable>(requestType: BackendRequestType, completion: @escaping (ExpectedType?, BackendNetworkError?) -> ()) {

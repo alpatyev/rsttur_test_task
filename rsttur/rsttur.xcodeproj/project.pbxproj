@@ -12,7 +12,7 @@
 		640102E12A0E8144006CE9B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 640102E02A0E8144006CE9B2 /* Preview Assets.xcassets */; };
 		640F061C2A0FA84C00B8202C /* CategoriesMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F061B2A0FA84C00B8202C /* CategoriesMainView.swift */; };
 		640F061E2A0FB54500B8202C /* CategoryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F061D2A0FB54500B8202C /* CategoryItemView.swift */; };
-		640F06232A0FB67300B8202C /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F06222A0FB67300B8202C /* CategoryViewModel.swift */; };
+		640F06232A0FB67300B8202C /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F06222A0FB67300B8202C /* CategoriesViewModel.swift */; };
 		640F06252A0FB6C200B8202C /* CategoryItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F06242A0FB6C200B8202C /* CategoryItemModel.swift */; };
 		640F06272A0FB74500B8202C /* Env_Colors_Regular.txt in Resources */ = {isa = PBXBuildFile; fileRef = 640F06262A0FB74500B8202C /* Env_Colors_Regular.txt */; };
 		640F062C2A0FB87900B8202C /* PlacesListMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640F062B2A0FB87900B8202C /* PlacesListMainView.swift */; };
@@ -46,7 +46,7 @@
 		640102E02A0E8144006CE9B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		640F061B2A0FA84C00B8202C /* CategoriesMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesMainView.swift; sourceTree = "<group>"; };
 		640F061D2A0FB54500B8202C /* CategoryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemView.swift; sourceTree = "<group>"; };
-		640F06222A0FB67300B8202C /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		640F06222A0FB67300B8202C /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		640F06242A0FB6C200B8202C /* CategoryItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemModel.swift; sourceTree = "<group>"; };
 		640F06262A0FB74500B8202C /* Env_Colors_Regular.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Env_Colors_Regular.txt; sourceTree = "<group>"; };
 		640F062B2A0FB87900B8202C /* PlacesListMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListMainView.swift; sourceTree = "<group>"; };
@@ -138,8 +138,8 @@
 		640102E92A0E81CA006CE9B2 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				640F061A2A0FA6E000B8202C /* List */,
 				640F06192A0FA6B500B8202C /* Categories */,
+				640F061A2A0FA6E000B8202C /* List */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -167,8 +167,8 @@
 		640F061F2A0FB64100B8202C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				640F061D2A0FB54500B8202C /* CategoryItemView.swift */,
 				640F061B2A0FA84C00B8202C /* CategoriesMainView.swift */,
+				640F061D2A0FB54500B8202C /* CategoryItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,7 +176,7 @@
 		640F06202A0FB64D00B8202C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				640F06222A0FB67300B8202C /* CategoryViewModel.swift */,
+				640F06222A0FB67300B8202C /* CategoriesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -481,7 +481,7 @@
 				640F06302A0FB95300B8202C /* PlacesViewModel.swift in Sources */,
 				640F061E2A0FB54500B8202C /* CategoryItemView.swift in Sources */,
 				640F06402A0FBCDE00B8202C /* BackendNetworkService.swift in Sources */,
-				640F06232A0FB67300B8202C /* CategoryViewModel.swift in Sources */,
+				640F06232A0FB67300B8202C /* CategoriesViewModel.swift in Sources */,
 				640102DA2A0E813C006CE9B2 /* rstturApp.swift in Sources */,
 				64F874DA2A0FED9A00064F56 /* Env_Colors_Gradient.swift in Sources */,
 				640F062C2A0FB87900B8202C /* PlacesListMainView.swift in Sources */,

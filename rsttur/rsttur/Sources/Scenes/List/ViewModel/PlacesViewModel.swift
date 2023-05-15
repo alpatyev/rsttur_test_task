@@ -2,4 +2,6 @@ import Combine
 
 // MARK: - Places viewmodel
 
-final class PlacesViewModel: ObservableObject {}
+final class PlacesViewModel: ObservableObject {
+    
+}
