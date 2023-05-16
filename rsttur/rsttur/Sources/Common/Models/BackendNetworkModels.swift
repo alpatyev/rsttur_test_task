@@ -37,7 +37,6 @@ struct PlaceDataModel: Decodable, Identifiable {
     let lat: Double
     let lon: Double
     let working_hours: [WorkingHoursDataModel]?
-    var imageData: Data?
 }
 
 // MARK: - Working hours model

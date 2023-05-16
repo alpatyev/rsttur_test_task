@@ -4,19 +4,28 @@ import SwiftUI
 
 struct DetailPlaceView: View {
     
-    @Binding var model: PlaceDataModel
+    @ObservedObject var viewModel: CategoriesViewModel
     
     var body: some View {
         VStack {
-            Text(model.name)
+            SafePlaceImageView(imageData: viewModel.imageBuffer[viewModel.selectedPlace.id] ?? Data())
+                .aspectRatio(1.5, contentMode: .fit)
+                .padding(40)
 
-            Spacer()
             
             HStack {
-                
                 Spacer()
             }
+            
+            Spacer()
         }
         .background(Env_Gradients.g11.linearGradient())
+        .edgesIgnoringSafeArea(.bottom)
+        .onTapGesture {
+            viewModel.detailPlaceViewTapped()
+        }
+        .onAppear {
+            viewModel.detailPlaceViewAppeared()
+        }
     }
 }

@@ -4,9 +4,7 @@ import SwiftUI
 
 extension Color {
     init(contants name: String) {
-       
-        
+        if let color =
         self.init(.white)
     }
 }
-

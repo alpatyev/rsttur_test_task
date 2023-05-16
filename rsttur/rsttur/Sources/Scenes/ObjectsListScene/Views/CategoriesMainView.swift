@@ -27,11 +27,8 @@ struct CategoriesMainView: View {
         .navigationViewStyle(.stack)
         .overlay(
             Group {
-                if viewModel.detailPlaceState {                    
-                    DetailPlaceView(model: $viewModel.selectedPlace)
-                        .onTapGesture {
-                            viewModel.detailPlaceViewTapped()
-                        }
+                if viewModel.detailPlaceState {
+                    DetailPlaceView(viewModel: viewModel)
                 }
             }
         )

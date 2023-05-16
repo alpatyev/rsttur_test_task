@@ -10,18 +10,25 @@ final class CategoriesViewModel: ObservableObject {
     @Published var placesList = [PlaceDataModel]()
     @Published var specificCategoryPlacesList = [PlaceDataModel]()
     @Published var selectedPlace = PlaceDataModel()
+    @Published var imageBuffer = [Int: Data]()
     
-    private var networkService: BackendNetworkServiceProtocol
-    private var cancellables = Set<AnyCancellable>()
+    private let deeplinkService: DeeplinkServiceProtocol
+    private let networkService: BackendNetworkServiceProtocol
+    private let cacheService: DataCashingServiceProtocol
+    private let cancellables = Set<AnyCancellable>()
     
     init() {
+        deeplinkService = DeeplinkService()
         networkService = BackendNetworkService()
+        cacheService = DataCashingService()
         
         initialFetchRequest()
     }
     
     func categoriesListAppeared() {
+        imageBuffer.removeAll()
         specificCategoryPlacesList.removeAll()
+        networkService.interruptImageTasks()
     }
     
     func selectedCategoryAppeared(with name: String) {
@@ -31,8 +38,15 @@ final class CategoriesViewModel: ObservableObject {
         }
     }
     
+    func detailPlaceViewAppeared() {
+        print(#function)
+    }
+    
     func placeSelected(with id: Int) {
-        detailPlaceState = true
+        if let detailPlace = placesList.first(where: { $0.id == id }) {
+            selectedPlace = detailPlace
+            detailPlaceState = true
+        }
     }
     
     func detailPlaceViewTapped() {
@@ -70,16 +84,19 @@ final class CategoriesViewModel: ObservableObject {
     }
     
     private func downloadImagesForSelectedCategory() {
-        DispatchQueue.main.async { [weak self] in
-            let urlList = self?.specificCategoryPlacesList.map { $0.image }
-            self?.networkService.fetchImageData(urls: urlList ?? [], completion: { data in
-                if let imageData = data,
-                   self?.specificCategoryPlacesList.endIndex == imageData.endIndex {
-                    for (index, item) in imageData.enumerated() {
-                        self?.specificCategoryPlacesList[index].imageData = item
+        for place in specificCategoryPlacesList {
+            if let cachedData = cacheService.getCachedImageData(with: place.id, from: .tableSize) {
+                imageBuffer[place.id] = cachedData
+            } else {
+                networkService.fetchImageData(id: place.id, url: place.image) { [weak self] id, data in
+                    DispatchQueue.main.async {
+                        if let downloadedData = data {
+                            self?.imageBuffer[id] = downloadedData.compressedAsImage(0.1)
+                            self?.cacheService.cacheImage(.tableSize, data: downloadedData, with: id)
+                        }
                     }
                 }
-            })
+            }
         }
     }
 }

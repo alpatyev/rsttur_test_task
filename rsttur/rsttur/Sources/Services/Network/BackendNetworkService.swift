@@ -4,7 +4,7 @@ import Foundation
 
 protocol BackendNetworkServiceProtocol {
     func fetchRequest<ExpectedType: Decodable>(requestType: BackendRequestType, completion: @escaping (ExpectedType?, BackendNetworkError?) -> ())
-    func fetchImageData(urls: [String], completion: @escaping ([Data]?) -> ())
+    func fetchImageData(id: Int, url: String, completion: @escaping (Int, Data?) -> ()) 
     func interruptImageTasks()
 }
 
@@ -15,11 +15,11 @@ final class BackendNetworkService: BackendNetworkServiceProtocol {
     private let session = URLSession.shared
     private let urlBuilder: BackendURLBuilderProtocol
     private let requestBuilder: BackendRequestBuilderProtocol
-    private var imagesTasksGroup = DispatchGroup()
     
     init() {
         urlBuilder = BackendURLBuilder()
         requestBuilder = BackendRequestBuilder()
+        
     }
     
     func fetchRequest<ExpectedType: Decodable>(requestType: BackendRequestType, completion: @escaping (ExpectedType?, BackendNetworkError?) -> ()) {
@@ -57,31 +57,17 @@ final class BackendNetworkService: BackendNetworkServiceProtocol {
         newTask.resume()
     }
     
-    func fetchImageData(urls: [String], completion: @escaping ([Data]?) -> ()) {
-        var imageDataDict = [String: Data]()
+    func fetchImageData(id: Int, url: String, completion: @escaping (Int, Data?) -> ()) {
+        guard let imageURL = URL(string: url) else { return }
         
-        for url in urls {
-            guard let imageURL = URL(string: url) else { continue }
-            imagesTasksGroup.enter()
-            
-            URLSession.shared.dataTask(with: imageURL) { [weak self] (data, response, error) in
-                defer { self?.imagesTasksGroup.leave() }
-                            
-                if let imageData = data  {
-                    imageDataDict[url] = imageData
-                }
-            }.resume()
-        }
-        
-        imagesTasksGroup.notify(queue: DispatchQueue.main) {
-            let imageDataArray = urls.map { imageDataDict[$0] ?? Data() }
-            completion(imageDataArray)
-        }
-
+        session.dataTask(with: imageURL) { data, _, _ in
+            if let imageData = data  {
+                completion(id, imageData)
+            }
+        }.resume()
     }
     
     func interruptImageTasks() {
-        imagesTasksGroup = DispatchGroup()
         session.invalidateAndCancel()
     }
 }

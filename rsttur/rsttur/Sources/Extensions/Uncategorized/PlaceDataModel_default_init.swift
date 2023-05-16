@@ -14,7 +14,6 @@ extension PlaceDataModel {
                   color: "",
                   lat: 0,
                   lon: 0,
-                  working_hours: nil,
-                  imageData: nil)
+                  working_hours: nil)
     }
 }

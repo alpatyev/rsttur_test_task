@@ -2,8 +2,8 @@ import Foundation
 
 // MARK: - Deeplink protocol
 
-protocol NavigatorDeeplinkProtocol {}
+protocol DeeplinkServiceProtocol {}
 
 // MARK: - Deeplink service
 
-final class DeeplinkService: NavigatorDeeplinkProtocol {}
+final class DeeplinkService: DeeplinkServiceProtocol {}

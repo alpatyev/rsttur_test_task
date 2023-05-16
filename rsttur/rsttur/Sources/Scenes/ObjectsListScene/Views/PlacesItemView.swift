@@ -5,10 +5,11 @@ import SwiftUI
 struct PlacesItemView: View {
     
     let model: PlaceDataModel
+    @ObservedObject var viewModel: CategoriesViewModel
     
     var body: some View {
         HStack {
-            SafePlaceImageView(imageData: model.imageData ?? Data())
+            SafePlaceImageView(imageData: viewModel.imageBuffer[model.id] ?? Data())
                 .frame(width: 120, height: 90)
             
             VStack(alignment: .leading, spacing: 4) {
