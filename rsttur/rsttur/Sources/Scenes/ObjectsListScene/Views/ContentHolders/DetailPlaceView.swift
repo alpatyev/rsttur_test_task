@@ -7,11 +7,12 @@ struct DetailPlaceView: View {
     @ObservedObject var viewModel: CategoriesViewModel
     
     var body: some View {
-        ScrollView {
+        ScrollView {                
             VStack(spacing: 30) {
                 VStack {
                     Text(viewModel.selectedPlace.name)
                         .font(.largeTitle)
+                        .multilineTextAlignment(.center)
                         .foregroundColor(Color(hex: Env_Colors_Dictionary.colors[viewModel.selectedPlace.color]))
                         .padding(10)
                 }
@@ -87,5 +88,4 @@ struct DetailPlaceView: View {
         }
     }
 }
-
 

@@ -5,6 +5,7 @@ import Combine
 
 final class CategoriesViewModel: ObservableObject {
     
+    @Published var isLoadingState = false
     @Published var detailPlaceState = false
     @Published var categoriesList = [CategoryItemModel]()
     @Published var placesList = [PlaceDataModel]()
@@ -77,7 +78,13 @@ final class CategoriesViewModel: ObservableObject {
     }
     
     private func initialFetchRequest() {
+        isLoadingState = true
+        
         networkService.fetchRequest(requestType: .objectsList) { [weak self] (model: ResponseDataModel?, _) in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                self?.isLoadingState = false
+            }
+            
             if let result = model {
                 self?.updateCategories(from: result.categories)
                 self?.updatePlaces(from: result.objects)

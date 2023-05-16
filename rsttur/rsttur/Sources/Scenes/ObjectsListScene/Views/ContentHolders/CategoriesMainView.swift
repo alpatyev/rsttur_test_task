@@ -8,28 +8,35 @@ struct CategoriesMainView: View {
     
     var body: some View {
         NavigationView {
-            List() {
-                ForEach(viewModel.categoriesList) { category in
-                    NavigationLink(destination: {
-                        PlacesListView(selectedCategory: category.type, viewModel: viewModel)
-                    }) {
-                        CategoryItemView(model: category)
+                if viewModel.isLoadingState {
+                   LoadingTextView()
+                } else {
+                
+                
+                List() {
+                    ForEach(viewModel.categoriesList) { category in
+                        NavigationLink(destination: {
+                            PlacesListView(selectedCategory: category.type, viewModel: viewModel)
+                        }) {
+                            CategoryItemView(model: category)
+                        }
                     }
                 }
-            }
-            .listStyle(.plain)
-            .navigationTitle("Категории")
-            .onAppear {
-                viewModel.categoriesListAppeared()
-            }
-        }
-        .navigationViewStyle(.stack)
-        .overlay(
-            Group {
-                if viewModel.detailPlaceState {
-                    DetailPlaceView(viewModel: viewModel)
+                .listStyle(.plain)
+                .navigationTitle("Категории")
+                .onAppear {
+                    viewModel.categoriesListAppeared()
                 }
             }
-        )
+        }
+            .navigationViewStyle(.stack)
+            .overlay(
+                Group {
+                    if viewModel.detailPlaceState {
+                        DetailPlaceView(viewModel: viewModel)
+                    }
+                }
+            )
     }
+    
 }

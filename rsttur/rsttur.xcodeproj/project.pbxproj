@@ -31,6 +31,7 @@
 		64A5EAA62A138AA700AFBA5D /* WorkingHoursItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5EAA52A138AA700AFBA5D /* WorkingHoursItemModel.swift */; };
 		64A5EAA82A138E0100AFBA5D /* WorkingHoursDataModel_converted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5EAA72A138E0100AFBA5D /* WorkingHoursDataModel_converted.swift */; };
 		64A5EAAC2A1396EE00AFBA5D /* WorkingDaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5EAAB2A1396EE00AFBA5D /* WorkingDaysView.swift */; };
+		64A5EAB02A13E94F00AFBA5D /* LoadingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5EAAF2A13E94F00AFBA5D /* LoadingTextView.swift */; };
 		64F874D02A0FD5EB00064F56 /* Env_Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F874CF2A0FD5EB00064F56 /* Env_Colors.swift */; };
 		64F874D32A0FE0F900064F56 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 64F874D22A0FE0F900064F56 /* swiftgen.yml */; };
 		64F874D82A0FED5800064F56 /* Env_Colors_Gradient.txt in Resources */ = {isa = PBXBuildFile; fileRef = 64F874D72A0FED5800064F56 /* Env_Colors_Gradient.txt */; };
@@ -74,6 +75,7 @@
 		64A5EAA72A138E0100AFBA5D /* WorkingHoursDataModel_converted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingHoursDataModel_converted.swift; sourceTree = "<group>"; };
 		64A5EAAB2A1396EE00AFBA5D /* WorkingDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingDaysView.swift; sourceTree = "<group>"; };
 		64A5EAAD2A13D24800AFBA5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64A5EAAF2A13E94F00AFBA5D /* LoadingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTextView.swift; sourceTree = "<group>"; };
 		64F874CF2A0FD5EB00064F56 /* Env_Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env_Colors.swift; sourceTree = "<group>"; };
 		64F874D22A0FE0F900064F56 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		64F874D72A0FED5800064F56 /* Env_Colors_Gradient.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Env_Colors_Gradient.txt; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				640F062D2A0FB8EA00B8202C /* PlacesItemView.swift */,
 				640F061D2A0FB54500B8202C /* CategoryItemView.swift */,
 				64A5EAAB2A1396EE00AFBA5D /* WorkingDaysView.swift */,
+				64A5EAAF2A13E94F00AFBA5D /* LoadingTextView.swift */,
 			);
 			path = Supplementary;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 				640F06252A0FB6C200B8202C /* CategoryItemModel.swift in Sources */,
 				640F062E2A0FB8EA00B8202C /* PlacesItemView.swift in Sources */,
 				64A5EA972A12D20E00AFBA5D /* DetailPlaceView.swift in Sources */,
+				64A5EAB02A13E94F00AFBA5D /* LoadingTextView.swift in Sources */,
 				640F061C2A0FA84C00B8202C /* CategoriesMainView.swift in Sources */,
 				64F874F82A1158BA00064F56 /* LinearGradientModel.swift in Sources */,
 				640F063C2A0FBC1200B8202C /* BackendNetworkModels.swift in Sources */,
