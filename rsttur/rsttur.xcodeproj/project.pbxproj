@@ -29,6 +29,9 @@
 		64A5EA9D2A12E7D500AFBA5D /* Compressed_UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5EA9C2A12E7D400AFBA5D /* Compressed_UIImage.swift */; };
 		64A5EAA02A12F18B00AFBA5D /* DataCashingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5EA9F2A12F18B00AFBA5D /* DataCashingService.swift */; };
 		64A5EAA22A130CCF00AFBA5D /* NavigationPointModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5EAA12A130CCF00AFBA5D /* NavigationPointModel.swift */; };
+		64A5EAA62A138AA700AFBA5D /* WorkingHoursItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5EAA52A138AA700AFBA5D /* WorkingHoursItemModel.swift */; };
+		64A5EAA82A138E0100AFBA5D /* WorkingHoursDataModel_converted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5EAA72A138E0100AFBA5D /* WorkingHoursDataModel_converted.swift */; };
+		64A5EAAC2A1396EE00AFBA5D /* WorkingDaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5EAAB2A1396EE00AFBA5D /* WorkingDaysView.swift */; };
 		64F874D02A0FD5EB00064F56 /* Env_Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F874CF2A0FD5EB00064F56 /* Env_Colors.swift */; };
 		64F874D32A0FE0F900064F56 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 64F874D22A0FE0F900064F56 /* swiftgen.yml */; };
 		64F874D82A0FED5800064F56 /* Env_Colors_Gradient.txt in Resources */ = {isa = PBXBuildFile; fileRef = 64F874D72A0FED5800064F56 /* Env_Colors_Gradient.txt */; };
@@ -69,6 +72,9 @@
 		64A5EA9C2A12E7D400AFBA5D /* Compressed_UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compressed_UIImage.swift; sourceTree = "<group>"; };
 		64A5EA9F2A12F18B00AFBA5D /* DataCashingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCashingService.swift; sourceTree = "<group>"; };
 		64A5EAA12A130CCF00AFBA5D /* NavigationPointModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPointModel.swift; sourceTree = "<group>"; };
+		64A5EAA52A138AA700AFBA5D /* WorkingHoursItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingHoursItemModel.swift; sourceTree = "<group>"; };
+		64A5EAA72A138E0100AFBA5D /* WorkingHoursDataModel_converted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingHoursDataModel_converted.swift; sourceTree = "<group>"; };
+		64A5EAAB2A1396EE00AFBA5D /* WorkingDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingDaysView.swift; sourceTree = "<group>"; };
 		64F874CF2A0FD5EB00064F56 /* Env_Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env_Colors.swift; sourceTree = "<group>"; };
 		64F874D22A0FE0F900064F56 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		64F874D72A0FED5800064F56 /* Env_Colors_Gradient.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Env_Colors_Gradient.txt; sourceTree = "<group>"; };
@@ -168,12 +174,8 @@
 		640F061F2A0FB64100B8202C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				640F062D2A0FB8EA00B8202C /* PlacesItemView.swift */,
-				640F062B2A0FB87900B8202C /* PlacesListView.swift */,
-				640F061B2A0FA84C00B8202C /* CategoriesMainView.swift */,
-				640F061D2A0FB54500B8202C /* CategoryItemView.swift */,
-				64A5EA942A12AA8700AFBA5D /* SafePlaceImageView.swift */,
-				64A5EA962A12D20D00AFBA5D /* DetailPlaceView.swift */,
+				64A5EAA92A13953A00AFBA5D /* ContentHolders */,
+				64A5EAAA2A13954B00AFBA5D /* Supplementary */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				640F06242A0FB6C200B8202C /* CategoryItemModel.swift */,
+				64A5EAA52A138AA700AFBA5D /* WorkingHoursItemModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				64A5EA992A12D56E00AFBA5D /* PlaceDataModel_default_init.swift */,
+				64A5EAA72A138E0100AFBA5D /* WorkingHoursDataModel_converted.swift */,
 			);
 			path = Uncategorized;
 			sourceTree = "<group>";
@@ -284,6 +288,27 @@
 				64A5EA9F2A12F18B00AFBA5D /* DataCashingService.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		64A5EAA92A13953A00AFBA5D /* ContentHolders */ = {
+			isa = PBXGroup;
+			children = (
+				64A5EA962A12D20D00AFBA5D /* DetailPlaceView.swift */,
+				640F061B2A0FA84C00B8202C /* CategoriesMainView.swift */,
+				640F062B2A0FB87900B8202C /* PlacesListView.swift */,
+			);
+			path = ContentHolders;
+			sourceTree = "<group>";
+		};
+		64A5EAAA2A13954B00AFBA5D /* Supplementary */ = {
+			isa = PBXGroup;
+			children = (
+				64A5EA942A12AA8700AFBA5D /* SafePlaceImageView.swift */,
+				640F062D2A0FB8EA00B8202C /* PlacesItemView.swift */,
+				640F061D2A0FB54500B8202C /* CategoryItemView.swift */,
+				64A5EAAB2A1396EE00AFBA5D /* WorkingDaysView.swift */,
+			);
+			path = Supplementary;
 			sourceTree = "<group>";
 		};
 		64F874D42A0FED0600064F56 /* Assets */ = {
@@ -515,6 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64A5EA922A12959A00AFBA5D /* Env_Colors_Dictionary.swift in Sources */,
+				64A5EAA62A138AA700AFBA5D /* WorkingHoursItemModel.swift in Sources */,
 				640F06252A0FB6C200B8202C /* CategoryItemModel.swift in Sources */,
 				640F062E2A0FB8EA00B8202C /* PlacesItemView.swift in Sources */,
 				64A5EA972A12D20E00AFBA5D /* DetailPlaceView.swift in Sources */,
@@ -529,6 +555,7 @@
 				640F061E2A0FB54500B8202C /* CategoryItemView.swift in Sources */,
 				64A5EA9A2A12D56E00AFBA5D /* PlaceDataModel_default_init.swift in Sources */,
 				640F06402A0FBCDE00B8202C /* BackendNetworkService.swift in Sources */,
+				64A5EAA82A138E0100AFBA5D /* WorkingHoursDataModel_converted.swift in Sources */,
 				640F06232A0FB67300B8202C /* CategoriesViewModel.swift in Sources */,
 				640102DA2A0E813C006CE9B2 /* rstturApp.swift in Sources */,
 				64A5EA952A12AA8700AFBA5D /* SafePlaceImageView.swift in Sources */,
@@ -540,6 +567,7 @@
 				640F063E2A0FBCCA00B8202C /* DeeplinkService.swift in Sources */,
 				64F874D02A0FD5EB00064F56 /* Env_Colors.swift in Sources */,
 				64F875022A1167AB00064F56 /* BackendRequestType.swift in Sources */,
+				64A5EAAC2A1396EE00AFBA5D /* WorkingDaysView.swift in Sources */,
 				64A5EAA02A12F18B00AFBA5D /* DataCashingService.swift in Sources */,
 				640F063A2A0FBBA900B8202C /* Color_from_hex.swift in Sources */,
 			);
