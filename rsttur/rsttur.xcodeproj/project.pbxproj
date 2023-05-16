@@ -28,6 +28,7 @@
 		64A5EA9A2A12D56E00AFBA5D /* PlaceDataModel_default_init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5EA992A12D56E00AFBA5D /* PlaceDataModel_default_init.swift */; };
 		64A5EA9D2A12E7D500AFBA5D /* Compressed_UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5EA9C2A12E7D400AFBA5D /* Compressed_UIImage.swift */; };
 		64A5EAA02A12F18B00AFBA5D /* DataCashingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5EA9F2A12F18B00AFBA5D /* DataCashingService.swift */; };
+		64A5EAA22A130CCF00AFBA5D /* NavigationPointModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5EAA12A130CCF00AFBA5D /* NavigationPointModel.swift */; };
 		64F874D02A0FD5EB00064F56 /* Env_Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F874CF2A0FD5EB00064F56 /* Env_Colors.swift */; };
 		64F874D32A0FE0F900064F56 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 64F874D22A0FE0F900064F56 /* swiftgen.yml */; };
 		64F874D82A0FED5800064F56 /* Env_Colors_Gradient.txt in Resources */ = {isa = PBXBuildFile; fileRef = 64F874D72A0FED5800064F56 /* Env_Colors_Gradient.txt */; };
@@ -67,6 +68,7 @@
 		64A5EA992A12D56E00AFBA5D /* PlaceDataModel_default_init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDataModel_default_init.swift; sourceTree = "<group>"; };
 		64A5EA9C2A12E7D400AFBA5D /* Compressed_UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compressed_UIImage.swift; sourceTree = "<group>"; };
 		64A5EA9F2A12F18B00AFBA5D /* DataCashingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCashingService.swift; sourceTree = "<group>"; };
+		64A5EAA12A130CCF00AFBA5D /* NavigationPointModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPointModel.swift; sourceTree = "<group>"; };
 		64F874CF2A0FD5EB00064F56 /* Env_Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env_Colors.swift; sourceTree = "<group>"; };
 		64F874D22A0FE0F900064F56 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		64F874D72A0FED5800064F56 /* Env_Colors_Gradient.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Env_Colors_Gradient.txt; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 			children = (
 				64F874F72A1158BA00064F56 /* LinearGradientModel.swift */,
 				640F063B2A0FBC1200B8202C /* BackendNetworkModels.swift */,
+				64A5EAA12A130CCF00AFBA5D /* NavigationPointModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				641417F42A128F6C00CA30CB /* Color_from_rgba.swift in Sources */,
 				64F874FE2A1166DB00064F56 /* BackendRequestBuilder.swift in Sources */,
 				64F874EF2A10516700064F56 /* LinearGradient_init.swift in Sources */,
+				64A5EAA22A130CCF00AFBA5D /* NavigationPointModel.swift in Sources */,
 				64F874F12A1051FD00064F56 /* Dictionary_to_LinearGradient.swift in Sources */,
 				640F061E2A0FB54500B8202C /* CategoryItemView.swift in Sources */,
 				64A5EA9A2A12D56E00AFBA5D /* PlaceDataModel_default_init.swift in Sources */,

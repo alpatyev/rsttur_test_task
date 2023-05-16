@@ -5,7 +5,7 @@ import Foundation
 protocol BackendNetworkServiceProtocol {
     func fetchRequest<ExpectedType: Decodable>(requestType: BackendRequestType, completion: @escaping (ExpectedType?, BackendNetworkError?) -> ())
     func fetchImageData(id: Int, url: String, completion: @escaping (Int, Data?) -> ()) 
-    func interruptImageTasks()
+    func interruptAllTasks()
 }
 
 // MARK: - "Backend" network service
@@ -67,7 +67,11 @@ final class BackendNetworkService: BackendNetworkServiceProtocol {
         }.resume()
     }
     
-    func interruptImageTasks() {
+    func interruptAllTasks() {
+        session.getAllTasks { task in
+            task.forEach { $0.cancel() }
+        }
+        
         session.invalidateAndCancel()
     }
 }

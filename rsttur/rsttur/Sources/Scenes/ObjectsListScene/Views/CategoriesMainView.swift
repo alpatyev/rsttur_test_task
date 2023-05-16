@@ -22,7 +22,6 @@ struct CategoriesMainView: View {
             .onAppear {
                 viewModel.categoriesListAppeared()
             }
-            
         }
         .navigationViewStyle(.stack)
         .overlay(
