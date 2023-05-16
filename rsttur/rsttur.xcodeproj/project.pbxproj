@@ -86,7 +86,7 @@
 		64F874FB2A11662800064F56 /* BackendURLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendURLBuilder.swift; sourceTree = "<group>"; };
 		64F874FD2A1166DB00064F56 /* BackendRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendRequestBuilder.swift; sourceTree = "<group>"; };
 		64F875012A1167AB00064F56 /* BackendRequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendRequestType.swift; sourceTree = "<group>"; };
-		64F875032A11735300064F56 /* BackendNetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BackendNetworkErrors.swift; path = ../../../../../../../../../../Documents/BackendNetworkErrors.swift; sourceTree = "<group>"; };
+		64F875032A11735300064F56 /* BackendNetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendNetworkErrors.swift; sourceTree = "<group>"; };
 		9B2B666E1E3C40511091C86F /* Pods-rsttur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rsttur.debug.xcconfig"; path = "Target Support Files/Pods-rsttur/Pods-rsttur.debug.xcconfig"; sourceTree = "<group>"; };
 		FAA85B4B71EEBD9922733D62 /* Pods-rsttur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rsttur.release.xcconfig"; path = "Target Support Files/Pods-rsttur/Pods-rsttur.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -700,6 +700,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"rsttur/Resources\"";
@@ -720,6 +721,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alpatiev.rsttur;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -732,6 +734,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"rsttur/Resources\"";
@@ -752,6 +755,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alpatiev.rsttur;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
