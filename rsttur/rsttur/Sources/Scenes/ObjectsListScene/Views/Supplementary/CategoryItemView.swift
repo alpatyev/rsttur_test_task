@@ -9,7 +9,6 @@ struct CategoryItemView: View {
     var body: some View {
         HStack {
             Text(model.categoryName)
-                .foregroundColor(.black)
                 .font(.title3)
             
             Spacer()

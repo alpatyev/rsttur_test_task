@@ -26,7 +26,6 @@ struct DetailPlaceView: View {
 
                 Text(viewModel.selectedPlace.description)
                     .font(.title3)
-                    .foregroundColor(.black)
                     .padding(.horizontal, 30)
 
                 VStack {
@@ -35,7 +34,6 @@ struct DetailPlaceView: View {
                         
                         Text("Часы работы:")
                             .font(.title2)
-                            .foregroundColor(.black)
                             .padding(10)
                         
                         Spacer()
@@ -77,7 +75,7 @@ struct DetailPlaceView: View {
                 Spacer()
             }
         }
-        .background(Color.white)
+        .background(Color(UIColor.systemBackground))
         .edgesIgnoringSafeArea(.all)
         .transition(.opacity.animation(.easeInOut(duration: 0.25)))
         .onTapGesture {
@@ -88,4 +86,6 @@ struct DetailPlaceView: View {
         }
     }
 }
+
+
 
