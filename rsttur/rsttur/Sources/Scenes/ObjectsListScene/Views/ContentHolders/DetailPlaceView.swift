@@ -27,6 +27,7 @@ struct DetailPlaceView: View {
                
                 Text(viewModel.selectedPlace.description)
                     .font(.title3)
+                    .foregroundColor(.black)
                     .cornerRadius(16)
                     .padding(.horizontal, 30)
 
@@ -36,6 +37,7 @@ struct DetailPlaceView: View {
                         
                         Text("Часы работы:")
                             .font(.title2)
+                            .foregroundColor(.black)
                             .padding(10)
                         
                         Spacer()
