@@ -9,8 +9,21 @@ struct BackendResponseContainer<CustomData: Decodable>: Decodable {
 // MARK: - Response data model
 
 struct ResponseDataModel: Decodable {
+    let geo: NavigationPointModel
     let categories: [CategoryDataModel]
     let objects: [PlaceDataModel]
+}
+
+// MARK: - Navigation point model
+
+struct NavigationPointModel: Decodable {
+    let longitude: Double
+    let latitude: Double
+    
+    enum CodingKeys: String, CodingKey {
+        case longitude = "lon"
+        case latitude = "lat"
+    }
 }
 
 // MARK: - Category model

@@ -23,12 +23,9 @@ struct DetailPlaceView: View {
                     .padding(.horizontal, 40)
                     .shadow(color: .gray, radius: 16, x: 4, y: 8)
 
-                
-               
                 Text(viewModel.selectedPlace.description)
                     .font(.title3)
                     .foregroundColor(.black)
-                    .cornerRadius(16)
                     .padding(.horizontal, 30)
 
                 VStack {
@@ -81,6 +78,7 @@ struct DetailPlaceView: View {
         }
         .background(Color.white)
         .edgesIgnoringSafeArea(.all)
+        .transition(.opacity.animation(.easeInOut(duration: 0.25)))
         .onTapGesture {
             viewModel.detailPlaceViewTapped()
         }

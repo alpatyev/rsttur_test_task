@@ -67,11 +67,11 @@ final class BackendNetworkService: BackendNetworkServiceProtocol {
         }.resume()
     }
     
-    func interruptAllTasks() {
-        session.getAllTasks { task in
-            task.forEach { $0.cancel() }
+    func interruptAllTasks() {        
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            self?.session.getAllTasks { task in
+                task.forEach { $0.cancel() }
+            }
         }
-        
-        session.invalidateAndCancel()
     }
 }

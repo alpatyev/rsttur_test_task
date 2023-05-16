@@ -16,7 +16,6 @@ final class CategoriesViewModel: ObservableObject {
     private let networkService: BackendNetworkServiceProtocol
     private let cacheService: DataCashingServiceProtocol
     private let cancellables = Set<AnyCancellable>()
-    private var selfNavigationPoint: NavigationPointModel?
     private var viewDidLoaded = false
     
     init() {
@@ -73,10 +72,8 @@ final class CategoriesViewModel: ObservableObject {
     }
     
     func navigatorButtonTapped() {
-        let endPoint = NavigationPointModel(longitude: selectedPlace.lon,
-                                            latitude: selectedPlace.lat)
-        deeplinkService.twoGisDeeplink(from: selfNavigationPoint ?? NavigationPointModel(longitude: 2, latitude: 2),
-                                       to: endPoint)
+        let endPoint = NavigationPointModel(longitude: selectedPlace.lon, latitude: selectedPlace.lat)
+        deeplinkService.twoGisDeeplink(to: endPoint)
     }
     
     private func initialFetchRequest() {
@@ -84,6 +81,7 @@ final class CategoriesViewModel: ObservableObject {
             if let result = model {
                 self?.updateCategories(from: result.categories)
                 self?.updatePlaces(from: result.objects)
+                self?.deeplinkService.setupNewCoordinate(from: result.geo)
             }
         }
     }
@@ -111,15 +109,23 @@ final class CategoriesViewModel: ObservableObject {
     
     private func downloadImagesForSelectedCategory() {
         for place in specificCategoryPlacesList {
-            if let cachedData = cacheService.getCachedImageData(with: place.id, from: .tableSize) {
-                imageBuffer[place.id] = cachedData
-            } else {
-                networkService.fetchImageData(id: place.id, url: place.image) { [weak self] id, data in
-                    DispatchQueue.main.async {
-                        if let downloadedData = data {
-                            self?.imageBuffer[id] = downloadedData.compressedAsImage(0.1)
-                            self?.cacheService.cacheImage(.tableSize, data: downloadedData, with: id)
-                        }
+            DispatchQueue.main.async { [weak self] in
+                self?.checkCacheAndUpload(using: place)
+            }
+        }
+    }
+    
+    private func checkCacheAndUpload(using place: PlaceDataModel) {
+        if let cachedData = cacheService.getCachedImageData(with: place.id, from: .tableSize) {
+            DispatchQueue.main.async(qos: .utility) { [weak self] in
+                self?.imageBuffer[place.id] = cachedData
+            }
+        } else {
+            networkService.fetchImageData(id: place.id, url: place.image) { [weak self] id, data in
+                DispatchQueue.main.async(qos: .userInitiated) { [weak self] in
+                    if let downloadedData = data {
+                        self?.imageBuffer[id] = downloadedData.compressedAsImage(0.1)
+                        self?.cacheService.cacheImage(.tableSize, data: downloadedData, with: id)
                     }
                 }
             }

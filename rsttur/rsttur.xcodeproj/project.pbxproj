@@ -28,7 +28,6 @@
 		64A5EA9A2A12D56E00AFBA5D /* PlaceDataModel_default_init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5EA992A12D56E00AFBA5D /* PlaceDataModel_default_init.swift */; };
 		64A5EA9D2A12E7D500AFBA5D /* Compressed_UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5EA9C2A12E7D400AFBA5D /* Compressed_UIImage.swift */; };
 		64A5EAA02A12F18B00AFBA5D /* DataCashingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5EA9F2A12F18B00AFBA5D /* DataCashingService.swift */; };
-		64A5EAA22A130CCF00AFBA5D /* NavigationPointModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5EAA12A130CCF00AFBA5D /* NavigationPointModel.swift */; };
 		64A5EAA62A138AA700AFBA5D /* WorkingHoursItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5EAA52A138AA700AFBA5D /* WorkingHoursItemModel.swift */; };
 		64A5EAA82A138E0100AFBA5D /* WorkingHoursDataModel_converted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5EAA72A138E0100AFBA5D /* WorkingHoursDataModel_converted.swift */; };
 		64A5EAAC2A1396EE00AFBA5D /* WorkingDaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5EAAB2A1396EE00AFBA5D /* WorkingDaysView.swift */; };
@@ -71,10 +70,10 @@
 		64A5EA992A12D56E00AFBA5D /* PlaceDataModel_default_init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDataModel_default_init.swift; sourceTree = "<group>"; };
 		64A5EA9C2A12E7D400AFBA5D /* Compressed_UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compressed_UIImage.swift; sourceTree = "<group>"; };
 		64A5EA9F2A12F18B00AFBA5D /* DataCashingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCashingService.swift; sourceTree = "<group>"; };
-		64A5EAA12A130CCF00AFBA5D /* NavigationPointModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPointModel.swift; sourceTree = "<group>"; };
 		64A5EAA52A138AA700AFBA5D /* WorkingHoursItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingHoursItemModel.swift; sourceTree = "<group>"; };
 		64A5EAA72A138E0100AFBA5D /* WorkingHoursDataModel_converted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingHoursDataModel_converted.swift; sourceTree = "<group>"; };
 		64A5EAAB2A1396EE00AFBA5D /* WorkingDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingDaysView.swift; sourceTree = "<group>"; };
+		64A5EAAD2A13D24800AFBA5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64F874CF2A0FD5EB00064F56 /* Env_Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env_Colors.swift; sourceTree = "<group>"; };
 		64F874D22A0FE0F900064F56 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		64F874D72A0FED5800064F56 /* Env_Colors_Gradient.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Env_Colors_Gradient.txt; sourceTree = "<group>"; };
@@ -145,6 +144,7 @@
 		640102E82A0E81A6006CE9B2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				64A5EAAE2A13D3A000AFBA5D /* Plists */,
 				64F874D42A0FED0600064F56 /* Assets */,
 				64F874D52A0FED0E00064F56 /* Colors_txt */,
 				64F874DE2A100CB000064F56 /* Colors_json */,
@@ -311,6 +311,14 @@
 			path = Supplementary;
 			sourceTree = "<group>";
 		};
+		64A5EAAE2A13D3A000AFBA5D /* Plists */ = {
+			isa = PBXGroup;
+			children = (
+				64A5EAAD2A13D24800AFBA5D /* Info.plist */,
+			);
+			path = Plists;
+			sourceTree = "<group>";
+		};
 		64F874D42A0FED0600064F56 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,7 +360,6 @@
 			children = (
 				64F874F72A1158BA00064F56 /* LinearGradientModel.swift */,
 				640F063B2A0FBC1200B8202C /* BackendNetworkModels.swift */,
-				64A5EAA12A130CCF00AFBA5D /* NavigationPointModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -550,7 +557,6 @@
 				641417F42A128F6C00CA30CB /* Color_from_rgba.swift in Sources */,
 				64F874FE2A1166DB00064F56 /* BackendRequestBuilder.swift in Sources */,
 				64F874EF2A10516700064F56 /* LinearGradient_init.swift in Sources */,
-				64A5EAA22A130CCF00AFBA5D /* NavigationPointModel.swift in Sources */,
 				64F874F12A1051FD00064F56 /* Dictionary_to_LinearGradient.swift in Sources */,
 				640F061E2A0FB54500B8202C /* CategoryItemView.swift in Sources */,
 				64A5EA9A2A12D56E00AFBA5D /* PlaceDataModel_default_init.swift in Sources */,
@@ -707,11 +713,11 @@
 				DEVELOPMENT_TEAM = 87G7HNZ9T9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = rsttur/Resources/Plists/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -741,11 +747,11 @@
 				DEVELOPMENT_TEAM = 87G7HNZ9T9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = rsttur/Resources/Plists/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (

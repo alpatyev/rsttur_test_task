@@ -12,7 +12,6 @@ struct PlacesListView: View {
             ForEach(viewModel.specificCategoryPlacesList) { place in
                 Button {
                     viewModel.placeSelected(with: place.id)
-                    print(place)
                 } label: {
                     PlacesItemView(model: place, viewModel: viewModel)
                 }
@@ -20,6 +19,7 @@ struct PlacesListView: View {
         }
         .listStyle(.plain)
         .navigationTitle("Oбъекты")
+        .transition(.opacity.animation(.easeIn(duration: 0.5)))
         .onAppear {
             viewModel.selectedCategoryAppeared(with: selectedCategory)
         }

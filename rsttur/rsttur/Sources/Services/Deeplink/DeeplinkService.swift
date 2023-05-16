@@ -4,19 +4,29 @@ import SwiftUI
 // MARK: - Deeplink protocol
 
 protocol DeeplinkServiceProtocol {
-    func twoGisDeeplink(from startPoint: NavigationPointModel, to endPoint: NavigationPointModel)
+    func twoGisDeeplink(to endPoint: NavigationPointModel)
+    func setupNewCoordinate(from userPoint: NavigationPointModel)
 }
 
 // MARK: - Deeplink service
 
 final class DeeplinkService: DeeplinkServiceProtocol {
-    func twoGisDeeplink(from startPoint: NavigationPointModel, to endPoint: NavigationPointModel) {
-        guard let navigatorURL = createURL(from: startPoint, to: endPoint) else { return }
-        
-        if UIApplication.shared.canOpenURL(navigatorURL) {
-            UIApplication.shared.open(navigatorURL, options: [:], completionHandler: nil)
+  
+    func setupNewCoordinate(from userPoint: NavigationPointModel) {
+        self.userPoint = userPoint
+    }
+    
+    
+    private var userPoint: NavigationPointModel?
+    
+    func twoGisDeeplink(to endPoint: NavigationPointModel) {
+        guard let userPointExists = userPoint,
+              let navigationURL = createURL(from: userPointExists, to: endPoint) else { return }
+
+        if UIApplication.shared.canOpenURL(navigationURL) {
+            UIApplication.shared.open(navigationURL, options: [:], completionHandler: nil)
         } else {
-            if let appStoreURl = URL(string: "https://itunes.apple.com/ru/app/id481627348?mt=8") {
+            if let appStoreURl = URL(string: "https://apps.apple.com/ru/app/2гис-навигатор-карты-справочник/id481627348") {
                 UIApplication.shared.open(appStoreURl, options: [:], completionHandler: nil)
             }
         }
