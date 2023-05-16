@@ -16,7 +16,6 @@ final class DeeplinkService: DeeplinkServiceProtocol {
         self.userPoint = userPoint
     }
     
-    
     private var userPoint: NavigationPointModel?
     
     func twoGisDeeplink(to endPoint: NavigationPointModel) {
@@ -31,14 +30,14 @@ final class DeeplinkService: DeeplinkServiceProtocol {
             }
         }
     }
-    
-    private func createURL(from startPoint: NavigationPointModel, to endPoint: NavigationPointModel) -> URL? {
-        let startLat = startPoint.latitude
-        let startLong = startPoint.longitude
-        
-        let endLat = endPoint.latitude
-        let endLong = endPoint.longitude
 
-        return URL(string: "dgis://2gis.ru/routeSearch/rsType/car/from/\(startLong),\(startLat)/to/\(endLong),\(endLat)")
+    private func createURL(from startPoint: NavigationPointModel, to endPoint: NavigationPointModel) -> URL? {
+        let startLat = Float(startPoint.latitude)
+        let startLong = Float(startPoint.longitude)
+        
+        let endLat = Float(endPoint.latitude)
+        let endLong = Float(endPoint.longitude)
+
+        return URL(string: "dis://2gis.ru/routeSearch/rsType/car/from/\(startLong),\(startLat)/to/\(endLong),\(endLat)")
     }
 }

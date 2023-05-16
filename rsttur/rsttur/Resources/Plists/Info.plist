@@ -2,13 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSAppTransportSecurity</key>
-	<dict/>
-	<key>Allow Arbitrary Loads</key>
-	<string>YES</string>
 	<key>LSApplicationQueriesSchemes</key>
-	<array/>
-	<key>item 0</key>
-	<string>dgis</string>
+	<array>
+		<string>dgis</string>
+	</array>
 </dict>
 </plist>
