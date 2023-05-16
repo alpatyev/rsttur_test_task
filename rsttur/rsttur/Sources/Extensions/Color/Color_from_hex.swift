@@ -1,10 +1,15 @@
 import SwiftUI
 
-// MARK: - Init Color from hex String
+// MARK: - Init Color from hex
 
 extension Color {
-    init(hex: String, alpha: Double = 1.0) {
-        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+    init(hex text: String?, alpha: Double = 1.0) {
+        guard let hexText = text else {
+            self.init(UIColor.clear)
+            return
+        }
+        
+        let hex = hexText.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int: UInt64 = 0
         
         Scanner(string: hex).scanHexInt64(&int)

@@ -4,6 +4,8 @@ import Foundation
 
 protocol BackendNetworkServiceProtocol {
     func fetchRequest<ExpectedType: Decodable>(requestType: BackendRequestType, completion: @escaping (ExpectedType?, BackendNetworkError?) -> ())
+    func fetchImageData(id: Int, url: String, completion: @escaping (Int, Data?) -> ()) 
+    func interruptImageTasks()
 }
 
 // MARK: - "Backend" network service
@@ -18,9 +20,6 @@ final class BackendNetworkService: BackendNetworkServiceProtocol {
         urlBuilder = BackendURLBuilder()
         requestBuilder = BackendRequestBuilder()
         
-        self.fetchRequest(requestType: .objectsList) { (result: ResponseDataModel?, _) in
-            print(result?.categories ?? "-")
-        }
     }
     
     func fetchRequest<ExpectedType: Decodable>(requestType: BackendRequestType, completion: @escaping (ExpectedType?, BackendNetworkError?) -> ()) {
@@ -56,5 +55,19 @@ final class BackendNetworkService: BackendNetworkServiceProtocol {
         }
         
         newTask.resume()
+    }
+    
+    func fetchImageData(id: Int, url: String, completion: @escaping (Int, Data?) -> ()) {
+        guard let imageURL = URL(string: url) else { return }
+        
+        session.dataTask(with: imageURL) { data, _, _ in
+            if let imageData = data  {
+                completion(id, imageData)
+            }
+        }.resume()
+    }
+    
+    func interruptImageTasks() {
+        session.invalidateAndCancel()
     }
 }

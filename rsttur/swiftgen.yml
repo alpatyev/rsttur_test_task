@@ -9,7 +9,7 @@ colors:
   inputs:
     - Colors_txt/Env_Colors_Regular.txt
   outputs:
-    output: Env_Colors_Regular.swift
+    output: Env_Colors.swift
     templateName: swift5
     params:
       enumName: Env_Colors
