@@ -11,24 +11,29 @@ final class CategoriesViewModel: ObservableObject {
     @Published var specificCategoryPlacesList = [PlaceDataModel]()
     @Published var selectedPlace = PlaceDataModel()
     @Published var imageBuffer = [Int: Data]()
-    
+
     private let deeplinkService: DeeplinkServiceProtocol
     private let networkService: BackendNetworkServiceProtocol
     private let cacheService: DataCashingServiceProtocol
     private let cancellables = Set<AnyCancellable>()
+    private var selfNavigationPoint: NavigationPointModel?
+    private var viewDidLoaded = false
     
     init() {
         deeplinkService = DeeplinkService()
         networkService = BackendNetworkService()
         cacheService = DataCashingService()
-        
-        initialFetchRequest()
     }
     
     func categoriesListAppeared() {
-        imageBuffer.removeAll()
-        specificCategoryPlacesList.removeAll()
-        networkService.interruptImageTasks()
+        if viewDidLoaded {
+            imageBuffer.removeAll()
+            specificCategoryPlacesList.removeAll()
+            networkService.interruptAllTasks()
+        } else {
+            viewDidLoaded = true
+            initialFetchRequest()
+        }
     }
     
     func selectedCategoryAppeared(with name: String) {
@@ -39,7 +44,21 @@ final class CategoriesViewModel: ObservableObject {
     }
     
     func detailPlaceViewAppeared() {
-        print(#function)
+        let id = selectedPlace.id
+        let url = selectedPlace.image
+        
+        if let cachedData = cacheService.getCachedImageData(with: id, from: .fullSized) {
+            imageBuffer[id] = cachedData
+        } else {
+            networkService.fetchImageData(id: id, url: url) { [weak self] id, data in
+                DispatchQueue.main.async {
+                    if let downloadedData = data {
+                        self?.imageBuffer[id] = downloadedData
+                        self?.cacheService.cacheImage(.fullSized, data: downloadedData, with: id)
+                    }
+                }
+            }
+        }
     }
     
     func placeSelected(with id: Int) {
@@ -51,6 +70,13 @@ final class CategoriesViewModel: ObservableObject {
     
     func detailPlaceViewTapped() {
         detailPlaceState = false
+    }
+    
+    func navigatorButtonTapped() {
+        let endPoint = NavigationPointModel(longitude: selectedPlace.lon,
+                                            latitude: selectedPlace.lat)
+        deeplinkService.twoGisDeeplink(from: selfNavigationPoint ?? NavigationPointModel(longitude: 2, latitude: 2),
+                                       to: endPoint)
     }
     
     private func initialFetchRequest() {
